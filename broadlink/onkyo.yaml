@@ -1,132 +1,142 @@
-'sound_off':
-  friendly_name: "Sound_OFF"
+'onkyo_off':
+  friendly_name: "Onkyo Off"
   command_on: 'JgBQAAABJ5QSEhM2ExITEhI3EhITNhM2ExITEhI3EjcSEhM2EzYTEhM2EzYTNhMSEhITEhM2ExITEhISExITNhM2EzYTEhI3EgAFKAABJ0kSAAxTDQUAAAAAAAA='
   
-'sound_on':
-  friendly_name: "Sound_ON"
+'onkyo_on':
+  friendly_name: "Onkyo On"
   command_on: 'JgBQAAABKJQTEhI3EhITEhM2ExISOBI4EjgSEhM3EzcTEhM3EzcTEhISExITNhMSExISEhMSExMSNxI4EhITNxM3EzYTNhM2EwAFBAABJ0kTAAxXDQUAAAAAAAA='
   
-'sound_sleep':
-  friendly_name: "Sound_SLEEP"
+'onkyo_sleep':
+  friendly_name: "Onkyo Sleep"
   command_on: 'JgBQAAABJ5QTExM3ExISEhM3ExMTNxM3EzcTEhI4EjgSEhM3EzcTEhM3ExISOBI4EjgSEhM3ExITEhI4EhMSEhMSEzcTEhI4EgAFBQABJ0oTAAxZDQUAAAAAAAA='
   
-'sound_volumedown':
-  friendly_name: "Sound_VOLUMEDOWN"
-  command_on: 'JgBIAAABKJQTERM1ExETERM1ExETNRM1EzUTEBM1EzQTERM0EzUTEBM1EzUTEBMRExATERMQExETERMREzUTNRM1EzQTNRM0EwAFhg0FAAAAAAAAAAAAAAAAAAA='
-  
-'sound_volumeup':
-  friendly_name: "Sound_VOLUMEUP"
-  command_on: 'JgBIAAABKJQTERM1ExETERM1ExETNRM0EzUTERM1EzUTERM1EzUTERMREzUTERMRExETERMRExETNRMREzUTNBM1EzUTNRM1EwAFiA0FAAAAAAAAAAAAAAAAAAA='
-  
-'sound_mute':
-  friendly_name: "Sound_MUTE"
-  command_on: 'JgBQAAABKZQSExI3ExITExM3ExMSOBI4EjgSEhM3EzcTExM3EzcTExI4EhMTNxMTExMSExMTExITExI4EhMTNxM3EzcTNxM3EwAFBgABKEoTAAxcDQUAAAAAAAA='
-  
-'sound_levelchselect':
-  friendly_name: "Sound_LEVELCHSELECT"
-  command_on: 'JgBQAAABKJMTEhI3EhITEhM2ExISNxI4EhITEhM2EzYTEhM3EzYTEhISExITNxMSEhITEhM2ExISNxI4EhITNhM2EzcTEhM2EwAFKQABJ0kSAAxWDQUAAAAAAAA='
-  
-'sound_leveldown':
-  friendly_name: "Sound_LEVELDOWN"
-  command_on: 'JgBIAAABKJQTEBM1ExATERM1ExETNRM1ExATEBM1EzUTERM1EzUTEBM1EzUTEBMQExATEBM1ExETEBMQEzQTNRM0EzQTEBM1EwAFhg0FAAAAAAAAAAAAAAAAAAA='
-  
-'sound_levelup':
-  friendly_name: "Sound_LEVELUP"
-  command_on: 'JgBIAAABKZQTERM1ExETERM1ExATNRM1ExETEhM1EzUTEBM1EzUTERMQEzUTEhMRExETERM1ExETNRMQEzUTNRM0EzUTERM1EwAFhw0FAAAAAAAAAAAAAAAAAAA='
-  
-'sound_enter':
-  friendly_name: "Sound_ENTER"
-  command_on: 'JgBQAAABJ5QTExI4EhMTExM3ExITNxM3ExISExM3EzcTEhM3EzcTExISEzcTNxMSExMSEhM3ExITNxMSExISOBI4EjgSExM3EwAFKgABKEoTAAxaDQUAAAAAAAA='
-  
-'sound_down':
-  friendly_name: "Sound_DOWN"
-  command_on: 'JgBIAAABKJMTEBM0ExATEBM0ExATNBM0EzUTEBM0EzQTEBM0EzQTEBM0EzQTEBMQExATEBMQEzQTEBMREzQTNBM0EzUTNBMQEwAFhA0FAAAAAAAAAAAAAAAAAAA='
-  
-'sound_left':
-  friendly_name: "Sound_LEFT"
-  command_on: 'JgBIAAABKZUTEBM1ExETERM1ExATNRM1EzUTERM1EzUTERM1EzUTERMRExETNRMRExETEBMREzQTNRM1ExETNRM1EzUTNRMQEwAFiA0FAAAAAAAAAAAAAAAAAAA='
-  
-'sound_right':
-  friendly_name: "Sound_RIGHT"
-  command_on: 'JgBIAAABKZQTERM1ExETERM1ExETNRM1EzUTERM1EzUTERM1EzUTERM1ExETNRMRExETERMREzUTERM1ExETNRM1EzUTNRMREwAFiA0FAAAAAAAAAAAAAAAAAAA='
-  
-'sound_up':
-  friendly_name: "Sound_UP"
-  command_on: 'JgBIAAABKZQTERM1ExETERM1ExETNRM1EzUTERM1EzUTERM1EzUTEBMQEzUTERMRExETERMREzUTNRMREzUTNRM1EzUTNRMREwAFiA0FAAAAAAAAAAAAAAAAAAA='
-  
-'sound_video1':
-  friendly_name: "Sound_VIDEO1"
-  command_on: 'JgBQAAABKJQSEhM3ExITEhI3EhITNhM2EzcTEhM2EzcTEhI3EjgSExI3EjcSNhM2ExITEhMTEhITExMSEhITEhM2EzcTNhM2EwAFBAABKEkSAAxXDQUAAAAAAAA='
-  
-'sound_video2':
-  friendly_name: "Sound_VIDEO2"
-  command_on: 'JgBQAAABJ5QTEhI3EhITEhM2ExITNxM3EzYTEhI3EjgSEhM3EzYTEhMSEjgSOBI3EhITEhMSEhITNhMSExMSExI4EjgSOBI2EwAFBAABJ0oTAAxYDQUAAAAAAAA='
-  
-'sound_cd':
-  friendly_name: "Sound_CD"
-  command_on: 'JgBQAAABJ5QTEhM3ExITEhI3EhITNhM2EzYTEhM3EzcTEhI4EjcSEhM3ExITEhI3EhITEhMSEhMSEhM3EzcTEhM2EzcTNxM2EwAFBAABKEkSAAxXDQUAAAAAAAA='
-  
-'sound_dvd':
-  friendly_name: "Sound_DVD"
-  command_on: 'JgBQAAABKZQTEhI4EhITExM3ExMSOBI4EhITExM3EzcTExI4EjgSExMTExISOBI4EhMSExMTEzcTNxM3ExMSExM3EzcTNxMTEwAFKwABKUoTAAxdDQUAAAAAAAA='
-  
-'sound_select':
-  friendly_name: "Sound_SELECT"
-  command_on: 'JgBQAAABJ5QTEhM3ExISExM3ExITNhM3EzcTEhI4EjcSEhM3EzcTEhMTEhITNxMSExISExI4EhITNxM3ExITNxM3EzcTEhI4EgAFBQABJ0oTAAxZDQUAAAAAAAA='
-  
-'sound_video3':
-  friendly_name: "Sound_VIDEO3"
-  command_on: 'JgBQAAABJ5QTEhM2ExITEhI4EhITNhM2EzYTEhM2EzYTEhI3EjgSEhM2ExITNxM2ExISEhMSExISExI3EhITEhM2EzcTNxM3EwAFBAABKEkSAAxXDQUAAAAAAAA='
-  
-'sound_video4':
-  friendly_name: "Sound_VIDEO4"
-  command_on: 'JgBQAAABKZQTExI4EhMTExM3ExMSOBI4EjgSExM3EzcTExM3EzcTExM3EjgSOBI4EjgSExITEzcTExMTEhMTExMTEjgSOBITEwAFCAABKEoSAAxgDQUAAAAAAAA='
-  
-'sound_dimmer':
-  friendly_name: "Sound_DIMMER"
+'onkyo_dimmer':
+  friendly_name: "Onkyo Dimmer"
   command_on: 'JgBQAAABJ5QTEhI3EhMSExM2ExMTNxM2EzYTEhI4EjcSEhM3EzcTEhM2ExISNxISEzYTEhMSEjcSEhM3ExITNhMSEzYTNxITEgAFAwABJ0kTAAxWDQUAAAAAAAA='
   
-'sound_display':
-  friendly_name: "Sound_DISPLAY"
-  command_on: 'JgBQAAABJ5USEhM2ExITEhI3EhMTNxM3ExITEhI4EjcSExM3EzcTEhM3ExISOBISEzcTEhM3ExITEhI4EhITNxMSEzYTEhI4EgAFKQABKEkSAAxYDQUAAAAAAAA='
+'onkyo_volumedown':
+  friendly_name: "Onkyo Volume-"
+  command_on: 'JgBIAAABKJQTERM1ExETERM1ExETNRM1EzUTEBM1EzQTERM0EzUTEBM1EzUTEBMRExATERMQExETERMREzUTNRM1EzQTNRM0EwAFhg0FAAAAAAAAAAAAAAAAAAA='
   
-'sound_menusetup':
-  friendly_name: "Sound_MENUSETUP"
+'onkyo_volumeup':
+  friendly_name: "Onkyo Volume+"
+  command_on: 'JgBIAAABKJQTERM1ExETERM1ExETNRM0EzUTERM1EzUTERM1EzUTERMREzUTERMRExETERMRExETNRMREzUTNBM1EzUTNRM1EwAFiA0FAAAAAAAAAAAAAAAAAAA='
+  
+'onkyo_mute':
+  friendly_name: "Onkyo Mute"
+  command_on: 'JgBQAAABKZQSExI3ExITExM3ExMSOBI4EjgSEhM3EzcTExM3EzcTExI4EhMTNxMTExMSExMTExITExI4EhMTNxM3EzcTNxM3EwAFBgABKEoTAAxcDQUAAAAAAAA='
+  
+'onkyo_levelchselect':
+  friendly_name: "Onkyo Speaker Select"
+  command_on: 'JgBQAAABKJMTEhI3EhITEhM2ExISNxI4EhITEhM2EzYTEhM3EzYTEhISExITNxMSEhITEhM2ExISNxI4EhITNhM2EzcTEhM2EwAFKQABJ0kSAAxWDQUAAAAAAAA='
+  
+'onkyo_leveldown':
+  friendly_name: "Onkyo Speaker Level Down"
+  command_on: 'JgBIAAABKJQTEBM1ExATERM1ExETNRM1ExATEBM1EzUTERM1EzUTEBM1EzUTEBMQExATEBM1ExETEBMQEzQTNRM0EzQTEBM1EwAFhg0FAAAAAAAAAAAAAAAAAAA='
+  
+'onkyo_levelup':
+  friendly_name: "Onkyo Speaker Level Up"
+  command_on: 'JgBIAAABKZQTERM1ExETERM1ExATNRM1ExETEhM1EzUTEBM1EzUTERMQEzUTEhMRExETERM1ExETNRMQEzUTNRM0EzUTERM1EwAFhw0FAAAAAAAAAAAAAAAAAAA='
+  
+'onkyo_menusetup':
+  friendly_name: "Onkyo Menu Setup"
   command_on: 'JgBQAAABKJQSEhM3ExITExM3ExMSOBI4EhITExM3EzcTExI4EjgSEhM3EzcTEhMTEjgSExM3ExITEhITEjgSOBISEzcTEhM3EwAFKgABKEoTAAxaDQUAAAAAAAA='
   
-'sound_modeallchannelstereo':
-  friendly_name: "Sound_MODEALLCHANNELSTEREO"
-  command_on: 'JgBQAAABKJMTEhI3EhITEhM2ExISNxI3EhITEhM2EzYTEhM2EjcSExISEzYTEhMSEjcSEhM2ExITNhMSEjcSNxISEzYTEhM2EwAFJwABJ0kSAAxTDQUAAAAAAAA='
+'onkyo_up':
+  friendly_name: "Onkyo Up"
+  command_on: 'JgBIAAABKZQTERM1ExETERM1ExETNRM1EzUTERM1EzUTERM1EzUTEBMQEzUTERMRExETERMREzUTNRMREzUTNRM1EzUTNRMREwAFiA0FAAAAAAAAAAAAAAAAAAA='
   
-'sound_modelatenight':
-  friendly_name: "Sound_MODELATENIGHT"
-  command_on: 'JgBQAAABJ5QTExI4EhMSExM3ExMTNxM3ExMSExM3EzcTExM3EzcTEhI4EjgSOBISEzcTEhM3EzcTExITExMTNxMTEjgSExITEwAFKgABKEoTAAxaDQUAAAAAAAA='
+'onkyo_down':
+  friendly_name: "Onkyo Down"
+  command_on: 'JgBIAAABKJMTEBM0ExATEBM0ExATNBM0EzUTEBM0EzQTEBM0EzQTEBM0EzQTEBMQExATEBMQEzQTEBMREzQTNBM0EzUTNBMQEwAFhA0FAAAAAAAAAAAAAAAAAAA='
   
-'sound_modenext':
-  friendly_name: "Sound_MODENEXT"
-  command_on: 'JgBQAAABKZQTExI4EhITExM3ExMSOBI4EhITExM3EzcTEhI4EjgSExITExITExI4EjgSExMTExISOBI4EjgSExMTEzcTNxM3EwAFKgABKEoSAAxaDQUAAAAAAAA='
+'onkyo_left':
+  friendly_name: "Onkyo Left"
+  command_on: 'JgBIAAABKZUTEBM1ExETERM1ExATNRM1EzUTERM1EzUTERM1EzUTERMRExETNRMRExETEBMREzQTNRM1ExETNRM1EzUTNRMQEwAFiA0FAAAAAAAAAAAAAAAAAAA='
   
-'sound_modeprevious':
-  friendly_name: "Sound_MODEPREVIOUS"
-  command_on: 'JgBQAAABJ5MTEhM2ExISEhM2ExMTNhM2ExITEhI3EjgSEhM2EzYTEhM3ExISEhM2EzcTEhMSEhITExM2EzYTEhITEjgSNhM2EwAFKQABJ0kTAAxWDQUAAAAAAAA='
+'onkyo_right':
+  friendly_name: "Onkyo Right"
+  command_on: 'JgBIAAABKZQTERM1ExETERM1ExETNRM1EzUTERM1EzUTERM1EzUTERM1ExETNRMRExETERMREzUTERM1ExETNRM1EzUTNRMREwAFiA0FAAAAAAAAAAAAAAAAAAA='
   
-'sound_modestereo':
-  friendly_name: "Sound_MODESTEREO"
-  command_on: 'JgBQAAABJ5MTEhM2ExISExI3EhITNhM2ExITEhI4EjcSEhM2EzcTEhMSEhITNhM3ExITEhI4EhITNhM2ExITEhM2EzYTEhI4EgAFKQABKEkTAAxVDQUAAAAAAAA='
+'onkyo_enter':
+  friendly_name: "Onkyo Enter"
+  command_on: 'JgBQAAABJ5QTExI4EhMTExM3ExITNxM3ExISExM3EzcTEhM3EzcTExISEzcTNxMSExMSEhM3ExITNxMSExISOBI4EjgSExM3EwAFKgABKEoTAAxaDQUAAAAAAAA='
   
-'sound_modesurround':
-  friendly_name: "Sound_MODESURROUND"
-  command_on: 'JgBQAAABKJQSExI4EhMTExM3ExISOBI4EjcSEhM3EzcTEhM2EzYTEhISExITNxM2ExISEhM3ExITNhM2ExITExI3EjgSEhM2EwAFBAABKEkTAAxYDQUAAAAAAAA='
-  
-'sound_modesurroundscroll':
-  friendly_name: "Sound_MODESURROUNDSCROLL"
-  command_on: 'JgBQAAABKJQSEhM2ExITEhI3EhITNxM3ExITEhI4EjcSExI3EjgSEhM2ExITNxM3ExISEhM3ExITEhI4EhITExM3EzcTEhI4EgAFKQABKEoSAAxXDQUAAAAAAAA='
-  
-'sound_multichinput':
-  friendly_name: "Sound_MULTICHINPUT"
-  command_on: 'JgBQAAABJ5QTEhI4EhITExM2ExITNxM3ExISEhM3EzcTEhM3EzcTEhISExITNxMSEhITEhMSExISOBI4EhMTNxM2EzYTNhM3EwAFKQABJ0oTAAxYDQUAAAAAAAA='
-  
-'sound_return':
-  friendly_name: "Sound_RETURN"
+'onkyo_return':
+  friendly_name: "Onkyo Return"
   command_on: 'JgBQAAABJ5QTEhM2ExMSEhM2ExITNhM2ExITEhI3EjcSExM2EzYTEhMSEhITNxMSEzYTEhI3EhITNhM2ExITNhMSEjcSExI2EwAFKQABJ0kTAAxWDQUAAAAAAAA='
   
+'onkyo_video1':
+  friendly_name: "Onkyo Video1"
+  command_on: 'JgBQAAABKJQSEhM3ExITEhI3EhITNhM2EzcTEhM2EzcTEhI3EjgSExI3EjcSNhM2ExITEhMTEhITExMSEhITEhM2EzcTNhM2EwAFBAABKEkSAAxXDQUAAAAAAAA='
+  
+'onkyo_video2':
+  friendly_name: "Onkyo Video2"
+  command_on: 'JgBQAAABJ5QTEhI3EhITEhM2ExITNxM3EzYTEhI3EjgSEhM3EzYTEhMSEjgSOBI3EhITEhMSEhITNhMSExMSExI4EjgSOBI2EwAFBAABJ0oTAAxYDQUAAAAAAAA='
+  
+'onkyo_video3':
+  friendly_name: "Onkyo Video3"
+  command_on: 'JgBQAAABJ5QTEhM2ExITEhI4EhITNhM2EzYTEhM2EzYTEhI3EjgSEhM2ExITNxM2ExISEhMSExISExI3EhITEhM2EzcTNxM3EwAFBAABKEkSAAxXDQUAAAAAAAA='
+  
+'onkyo_video4':
+  friendly_name: "Onkyo Video4"
+  command_on: 'JgBQAAABKZQTExI4EhMTExM3ExMSOBI4EjgSExM3EzcTExM3EzcTExM3EjgSOBI4EjgSExITEzcTExMTEhMTExMTEjgSOBITEwAFCAABKEoSAAxgDQUAAAAAAAA='
+  
+'onkyo_cd':
+  friendly_name: "Onkyo CD"
+  command_on: 'JgBQAAABJ5QTEhM3ExITEhI3EhITNhM2EzYTEhM3EzcTEhI4EjcSEhM3ExITEhI3EhITEhMSEhMSEhM3EzcTEhM2EzcTNxM2EwAFBAABKEkSAAxXDQUAAAAAAAA='
+  
+'onkyo_dvd':
+  friendly_name: "Onkyo DVD"
+  command_on: 'JgBQAAABKZQTEhI4EhITExM3ExMSOBI4EhITExM3EzcTExI4EjgSExMTExISOBI4EhMSExMTEzcTNxM3ExMSExM3EzcTNxMTEwAFKwABKUoTAAxdDQUAAAAAAAA='
+  
+'onkyo_modeallchannelstereo':
+  friendly_name: "Onkyo All Channel Stereo"
+  command_on: 'JgBQAAABKJMTEhI3EhITEhM2ExISNxI3EhITEhM2EzYTEhM2EjcSExISEzYTEhMSEjcSEhM2ExITNhMSEjcSNxISEzYTEhM2EwAFJwABJ0kSAAxTDQUAAAAAAAA='
+  
+'onkyo_modestereo':
+  friendly_name: "Onkyo 2 Channel Stereo"
+  command_on: 'JgBQAAABJ5MTEhM2ExISExI3EhITNhM2ExITEhI4EjcSEhM2EzcTEhMSEhITNhM3ExITEhI4EhITNhM2ExITEhM2EzYTEhI4EgAFKQABKEkTAAxVDQUAAAAAAAA='
+#
+# Never use this feature
+#  
+#'onkyo_modedirect':
+#  friendly_name: "Onkyo Mode: Direct"
+#  command_on: 'JgBQAAABJ5QTEhM3ExISExM3ExITNhM3EzcTEhI4EjcSEhM3EzcTEhMTEhITNxMSExISExI4EhITNxM3ExITNxM3EzcTEhI4EgAFBQABJ0oTAAxZDQUAAAAAAAA='
+
+#
+#note: modified this name heavily from the original remote file  
+#
+'onkyo_modespeakersscroll':
+  friendly_name: "Onkyo Scroll Speaker Modes"
+  command_on: 'JgBQAAABKJQSExI4EhMTExM3ExISOBI4EjcSEhM3EzcTEhM2EzYTEhISExITNxM2ExISEhM3ExITNhM2ExITExI3EjgSEhM2EwAFBAABKEkTAAxYDQUAAAAAAAA='
+
+# Since the previous command already scrolls, dont want these two  
+#'onkyo_modenext':
+#  friendly_name: "Onkyo Mode: Scroll Next Mode"
+#  command_on: 'JgBQAAABKZQTExI4EhITExM3ExMSOBI4EhITExM3EzcTEhI4EjgSExITExITExI4EjgSExMTExISOBI4EjgSExMTEzcTNxM3EwAFKgABKEoSAAxaDQUAAAAAAAA='
+#  
+#'onkyo_modeprevious':
+#  friendly_name: "Onkyo Mode: Scroll Previous Mode"
+#  command_on: 'JgBQAAABJ5MTEhM2ExISEhM2ExMTNhM2ExITEhI3EjgSEhM2EzYTEhM3ExISEhM2EzcTEhMSEhITExM2EzYTEhITEjgSNhM2EwAFKQABJ0kTAAxWDQUAAAAAAAA='
+#  
+
+'onkyo_modesurroundscroll':
+  friendly_name: "Onkyo Scroll Surround Sound Modes"
+  command_on: 'JgBQAAABKJQSEhM2ExITEhI3EhITNxM3ExITEhI4EjcSExI3EjgSEhM2ExITNxM3ExISEhM3ExITEhI4EhITExM3EzcTEhI4EgAFKQABKEoSAAxXDQUAAAAAAAA='
+#
+#
+# Never use this feature
+#
+#  
+#'onkyo_modelatenight':
+#  friendly_name: "Onkyo Late Night Mode"
+#  command_on: 'JgBQAAABJ5QTExI4EhMSExM3ExMTNxM3ExMSExM3EzcTExM3EzcTEhI4EjgSOBISEzcTEhM3EzcTExITExMTNxMTEjgSExITEwAFKgABKEoTAAxaDQUAAAAAAAA='
+  
+# This switches the display between the speaker mode and Dolby modes
+#   I never use this feature
+#
+#'onkyo_display':
+#  friendly_name: "Onkyo Display"
+#  command_on: 'JgBQAAABJ5USEhM2ExITEhI3EhMTNxM3ExITEhI4EjcSExM3EzcTEhM3ExISOBISEzcTEhM3ExITEhI4EhITNxMSEzYTEhI4EgAFKQABKEkSAAxYDQUAAAAAAAA='
+#  

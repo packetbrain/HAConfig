@@ -86,7 +86,7 @@
           seconds: 5
   action:
     - service: homeassistant.turn_on
-      entity_id: switch.sound_off
+      entity_id: switch.onkyo_off
     - service: homeassistant.turn_off
       entity_id: switch.tv_off
 #
@@ -104,7 +104,7 @@
           seconds: 5
   action:
     - service: homeassistant.turn_on
-      entity_id: switch.sound_on
+      entity_id: switch.onkyo_on
     - service: script.mutetv
     - service: homeassistant.turn_off
       entity_id: switch.tv_on

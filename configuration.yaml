@@ -9,7 +9,9 @@ homeassistant:
   customize: !include customize.yaml
 
   customize_glob:
-    "switch.sound_*":
+    "switch.tv_*":
+      icon: mdi:power-socket-eu
+    "switch.onkyo_*":
 #      assumed_state: false 
       icon: mdi:power-socket-eu
 # while "assumed_state" did turn the remote controls into toggles... 

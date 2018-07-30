@@ -2,69 +2,68 @@
     name: Onkyo Remote
     view: yes
     entities:
-      - group.sound_power
-      - group.sound_volume
-      - group.sound_menus
-      - group.sound_inputs
-      - group.sound_misc
+      - group.onkyo_power
+      - group.onkyo_volume
+      - group.onkyo_inputs
+      - group.onkyo_speakerlevels
+      - group.onkyo_modes
+      - group.onkyo_menus
 
 
-  Sound_Power:
+  Onkyo_Power:
     control: hidden
     name: Power Control
     entities:
-      - switch.sound_off
-      - switch.sound_on
-      - switch.sound_sleep
+      - switch.onkyo_off
+      - switch.onkyo_on
+      - switch.onkyo_sleep
+      - switch.onkyo_dimmer
 
-  Sound_Volume:
+  Onkyo_Volume:
     control: hidden
     name: Volume Control
     entities:
-      - switch.sound_volumedown
-      - switch.sound_volumeup
-      - switch.sound_mute
-      - switch.sound_levelchselect
-      - switch.sound_leveldown
-      - switch.sound_levelup
+      - switch.onkyo_volumeup
+      - switch.onkyo_volumedown
+      - switch.onkyo_mute
 
-  Sound_Menus:
+  Onkyo_SpeakerLevels:
+    control: hidden
+    name: Speaker Power Level
+    entities:
+      - switch.onkyo_levelchselect
+      - switch.onkyo_levelup
+      - switch.onkyo_leveldown
+
+  Onkyo_Menus:
     control: hidden
     name: Menu Control
     entities:
-      - switch.sound_enter
-      - switch.sound_down
-      - switch.sound_enter
-      - switch.sound_left
-      - switch.sound_right
-      - switch.sound_up
-      - switch.sound_return
+      - switch.onkyo_up
+      - switch.onkyo_down
+      - switch.onkyo_left
+      - switch.onkyo_right
+      - switch.onkyo_enter
+      - switch.onkyo_return
+      - switch.onkyo_menusetup
 
-  Sound_Inputs:
+  Onkyo_Inputs:
     control: hidden
     name: Change Input Source
     entities:
-      - switch.sound_video1
-      - switch.sound_video2
-      - switch.sound_cd
-      - switch.sound_dvd
-      - switch.sound_video3
-      - switch.sound_video4
+      - switch.onkyo_video1
+      - switch.onkyo_video2
+      - switch.onkyo_cd
+      - switch.onkyo_dvd
+      - switch.onkyo_video3
+      - switch.onkyo_video4
 
-  Sound_Misc:
+  Onkyo_Modes:
     control: hidden
-    name: Miscellaneous
+    name: Speaker Modes
     entities:
-      - switch.sound_select
-      - switch.sound_menusetup
-      - switch.sound_modeallchannelstereo
-      - switch.sound_modelatenight
-      - switch.sound_modenext
-      - switch.sound_modeprevious
-      - switch.sound_modestereo
-      - switch.sound_modesurround
-      - switch.sound_modesurroundscroll
-      - switch.sound_multichinput
-      - switch.sound_dimmer
-      - switch.sound_display
+      - switch.onkyo_modeallchannelstereo
+      - switch.onkyo_modestereo
+      - switch.onkyo_modespeakersscroll
+      - switch.onkyo_modesurroundscroll
 

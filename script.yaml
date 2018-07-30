@@ -58,7 +58,7 @@ mutetv:
 #
 #
 # 1. Turn on TV
-# 2. Turn on Onkyo - Video1
+# 2. Turn on Onkyo - Video1 (An automation mutes TV here too)
 # 3. Turn on Netflix
 # 4. Wait 27 seconds and jam all the way left
 # 5. Hit OK to login as Ken
@@ -72,7 +72,7 @@ netflixken:
     - delay:
         seconds: 5 
     - service: homeassistant.turn_on
-      entity_id: switch.sound_video1
+      entity_id: switch.onkyo_video1
     - delay:
         seconds: 5
     - service: homeassistant.turn_on
@@ -123,7 +123,7 @@ netflixsimon:
     - delay:
         seconds: 8 
     - service: homeassistant.turn_on
-      entity_id: switch.sound_off
+      entity_id: switch.onkyo_off
     - delay:
         seconds: 2
     - service: homeassistant.turn_on
