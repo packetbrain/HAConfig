@@ -154,8 +154,8 @@ cover:
 
 
 media_player:
-  - platform: panasonic_viera
-    host: 7.7.7.242
+#  - platform: panasonic_viera
+#    host: 7.7.7.242
   - platform: roku
     host: 7.7.7.243
 
