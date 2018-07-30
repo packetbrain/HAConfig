@@ -1,0 +1,75 @@
+  XboxTab:
+    name: Xbox
+    view: yes
+    entities:
+      - group.xbox_power_control
+      - group.xbox_menu_navigation
+      - group.xbox_media_player_control_buttons
+      - group.xbox_channel_navigation
+      - group.xbox_miscellaneous_buttons
+
+  Xbox_Power_Control:
+    control: hidden
+    name: Power Control
+    entities:
+      - script.xboxon
+      - script.xboxoff
+
+  Xbox_Menu_Navigation:
+    control: hidden
+    name: Menu Navigation
+    entities:
+      - switch.xbox_uparrow
+      - switch.xbox_downarrow
+      - switch.xbox_leftarrow
+      - switch.xbox_rightarrow
+      - switch.xbox_ok
+      - switch.xbox_back_button
+
+  Xbox_Media_Player_Control_Buttons:
+    control: hidden
+    name: Media Player Control
+    entities:
+      - switch.xbox_play_3
+      - switch.xbox_pause
+      - switch.xbox_back_6sec
+      - switch.xbox_forward_30sec
+      - switch.xbox_fastforward
+      - switch.xbox_rewind
+      - switch.xbox_mute
+      - switch.xbox_record
+      - switch.xbox_stop
+
+  Xbox_Channel_Navigation:
+    control: hidden
+    name: Channel Navigation
+    entities:
+      - switch.xbox_0
+      - switch.xbox_1
+      - switch.xbox_2
+      - switch.xbox_3
+      - switch.xbox_4
+      - switch.xbox_5
+      - switch.xbox_6
+      - switch.xbox_7
+      - switch.xbox_8
+      - switch.xbox_9
+      - switch.xbox_channelup
+      - switch.xbox_channeldown
+
+  Xbox_Miscellaneous_Buttons:
+    control: hidden
+    name: Miscellaneous Buttons
+    entities:
+      - switch.xbox_clear
+      - switch.xbox_enter
+      - switch.xbox_info
+      - switch.xbox_reload
+      - switch.xbox_menu
+      - switch.xbox_b_button
+      - switch.xbox_y_button
+      - switch.xbox_open
+      - switch.xbox_fancybutton
+      - switch.xbox_a_button
+      - switch.xbox_x_button
+

@@ -1,0 +1,197 @@
+xbox_discrete_power_on1:
+  friendly_name: "Xbox on1"
+  command_on: 'JgBAAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dHR0dHQ4ACM8NBQAAAAAAAA=='
+
+xbox_discrete_power_on2:
+  friendly_name: "Xbox on2"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODg4ODg4ODg4OHR0dDg4ODg4OHR0dHR0dDgAIzw0FAAAAAA=='
+
+xbox_discrete_power_off1:
+  friendly_name: "Xbox off1"
+  command_on: 'JgBAAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dHR0ODh0ACN4NBQAAAAAAAA=='
+
+xbox_discrete_power_off2:
+  friendly_name: "Xbox off2"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODg4ODg4ODg4OHR0dDg4ODg4OHR0dHQ4OHQAI3g0FAAAAAA=='
+
+xbox_0:
+  friendly_name: "Xbox 0"
+  command_on: 'JgBGAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4ODg4ODg4ODg4ACO0NBQ=='
+  
+xbox_1:
+  friendly_name: "Xbox 1"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4ODg4ODg4dAAj8DQUAAA=='
+  
+xbox_2:
+  friendly_name: "Xbox 2"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4ODg4OHR0OAAjtDQUAAA=='
+  
+xbox_3:
+  friendly_name: "Xbox 3"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4ODg4OHQ4OAAj8DQUAAA=='
+  
+xbox_4:
+  friendly_name: "Xbox 4"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4ODh0dDg4OAAjtDQUAAA=='
+  
+xbox_5:
+  friendly_name: "Xbox 5"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4ODh0dHQAI/A0FAAAAAA=='
+  
+xbox_6:
+  friendly_name: "Xbox 6"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4ODh0ODh0OAAjtDQUAAA=='
+  
+xbox_7:
+  friendly_name: "Xbox 7"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4ODh0ODg4OAAj8DQUAAA=='
+  
+xbox_8:
+  friendly_name: "Xbox 8"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4dHQ4ODg4OAAjtDQUAAA=='
+  
+xbox_9:
+  friendly_name: "Xbox 9"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4dHQ4OHQAI/A0FAAAAAA=='
+  
+xbox_clear:
+  friendly_name: "Xbox Clear"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4dHR0dDgAI7Q0FAAAAAA=='
+  
+xbox_enter:
+  friendly_name: "Xbox Enter"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4dHR0ODgAI/A0FAAAAAA=='
+  
+#xbox_play:
+#  friendly_name: "Xbox Play"
+#  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4dDg4dHQAI/A0FAAAAAA=='
+  
+xbox_mute:
+  friendly_name: "Xbox Mute"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4dDg4ODh0OAAjtDQUAAA=='
+  
+xbox_info:
+  friendly_name: "Xbox Info"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4ODg4dDg4ODg4OAAj8DQUAAA=='
+  
+#xbox_volumeup:
+#  friendly_name: "Xbox VOLUMEUP"
+#  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHR0ODg4ODg4OAAjtDQUAAA=='
+#  
+#xbox_volumedown:
+#  friendly_name: "Xbox VOLUMEDOWN"
+#  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHR0ODg4OHQAI/A0FAAAAAA=='
+  
+xbox_channelup:
+  friendly_name: "Xbox Channel Up"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHR0ODh0dDgAI7Q0FAAAAAA=='
+  
+xbox_channeldown:
+  friendly_name: "Xbox Channel Down"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHR0ODh0ODgAI/A0FAAAAAA=='
+  
+xbox_fastforward:
+  friendly_name: "Xbox Fast Forward"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHR0dHQ4ODgAI7Q0FAAAAAA=='
+  
+xbox_rewind:
+  friendly_name: "Xbox Rewind"
+  command_on: 'JgBAAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHR0dHR0ACPwNBQAAAAAAAA=='
+  
+#xbox_play_2:
+#  friendly_name: "Xbox PLAY_2"
+#  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHR0dDg4dDgAI7Q0FAAAAAA=='
+  
+xbox_play_3:
+  friendly_name: "Xbox Play"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHR0dDg4dDgAI7Q0FAAAAAA=='
+  
+xbox_record:
+  friendly_name: "Xbox Record"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHR0dDg4ODgAI/A0FAAAAAA=='
+  
+xbox_pause:
+  friendly_name: "Xbox Pause"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHQ4OHQ4ODg4OAAjtDQUAAA=='
+  
+xbox_stop:
+  friendly_name: "Xbox Stop"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHQ4OHQ4OHQAI/A0FAAAAAA=='
+  
+xbox_forward_30sec:
+  friendly_name: "Xbox Forward 30Sec"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHQ4OHR0dDgAI7Q0FAAAAAA=='
+  
+xbox_back_6sec:
+  friendly_name: "Xbox Back 6Sec"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHQ4OHR0ODgAI/A0FAAAAAA=='
+  
+xbox_reload:
+  friendly_name: "Xbox Reload"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHQ4ODg4dDg4OAAjtDQUAAA=='
+  
+xbox_uparrow:
+  friendly_name: "Xbox Up Arrow"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHQ4ODg4ODh0OAAjtDQUAAA=='
+  
+xbox_downarrow:
+  friendly_name: "Xbox Down Arrow"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODg4OHQ4ODg4ODg4OAAj8DQUAAA=='
+  
+xbox_leftarrow:
+  friendly_name: "Xbox Left Arrow"
+  command_on: 'JgBEAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dDg4ODg4ODg4OAAjtDQUAAA=='
+  
+xbox_rightarrow:
+  friendly_name: "Xbox Right Arrow"
+# learned command... held down for a second... generated two right moves
+#  command_on: 'JgBUAVgcDw8ODhAcDxwtHRAOEA4QDRAOEA4QDRENEA4QDhANHg4RDRAODx0QDhAOEA0RDh0dEQ0RDRAOHh0QDhAOEA4dAAjIWBwQDg8NEB0PHCweEA0RDRAOEA4QDREODw4QDw8NEQ4dDhAODw4QHRAOEA0RDRAOHh0QDhAOEA0eHhANEQ0QDx0ACMlYHA8ODw0RHA8cLR0QDhANEQ0QDhAOEA0RDRAOEA8PDh0MEg4QDg8dEA4QDhANEQ4dHRENEA4QDh0eEA4QDRENHgAIyFgcEA0QDRAcEBwsHREODw4QDhAOEA0QDhAOEA0RDg8OHg4QDg8OEB0QDRENEQ0QDh4dEA4QDhANHh4QDRENEA4eAAjIWB0PDRAOEBwPHCweEA0RDRAOEA4QDhANEA4QDhANEQ0eDhAOEA0QHRAOEA0RDRENHh0RDRAOEA4dHhAOEA0RDR4ADQUAAAAA'
+# 1 repeat
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dDg4ODg4OHQAI/A0FAAAAAA=='
+# 3 repeats
+#  command_on: 'JgNCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dDg4ODg4OHQAI/A0FAAAAAA=='
+  
+xbox_ok:
+  friendly_name: "Xbox OK"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dDg4ODh0dDgAI7Q0FAAAAAA=='
+  
+xbox_back_button:
+  friendly_name: "Xbox Back Button"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dDg4ODh0ODgAI/A0FAAAAAA=='
+  
+xbox_menu:
+  friendly_name: "Xbox Menu"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dDg4dHQ4ODgAI7Q0FAAAAAA=='
+  
+xbox_b_button:
+  friendly_name: "Xbox B Button"
+  command_on: 'JgBAAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dDg4dHR0ACPwNBQAAAAAAAA=='
+  
+xbox_y_button:
+  friendly_name: "Xbox Y Button"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dDg4dDg4dDgAI7Q0FAAAAAA=='
+  
+xbox_open:
+  friendly_name: "Xbox OPEN"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4ODh0dHR0ODg4ODgAI7Q0FAAAAAA=='
+  
+#xbox_display:
+#  friendly_name: "Xbox Display"
+#  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4dHQ4OHQ4ODg4ODgAI/A0FAAAAAA=='
+  
+#xbox_title:
+#  friendly_name: "Xbox TITLE"
+#  command_on: 'JgBAAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4dHR0dDg4ODh0ACPwNBQAAAAAAAA=='
+  
+xbox_fancybutton:
+  friendly_name: "Xbox Fancy Button"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4dDg4dDg4dHQ4ODgAI7Q0FAAAAAA=='
+  
+xbox_a_button:
+  friendly_name: "Xbox A Button"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4dDg4dDg4dDg4dDgAI7Q0FAAAAAA=='
+  
+xbox_x_button:
+  friendly_name: "Xbox X Button"
+  command_on: 'JgBCAFcdDg4ODg4dDh0rHQ4ODg4ODg4ODg4ODg4ODg4ODg4OHQ4ODg4ODh0dDg4ODh0dHQ4ODg4dDg4dHR0ODg4ODgAI7Q0FAAAAAA=='
+  

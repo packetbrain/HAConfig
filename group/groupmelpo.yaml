@@ -1,0 +1,6 @@
+  MelpoTab:
+    name: Melpo
+    view: yes
+    entities:
+      - switch.melpo
+

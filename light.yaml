@@ -1,0 +1,73 @@
+#######################################
+#                                     #
+# Lights                              #
+#                                     #
+#######################################
+#
+#
+# Sonoff MQTT Light Devices
+#
+#
+#
+
+#
+# Family Room Lights
+#
+- platform: mqtt
+  name: "Foyer"
+  state_topic: "stat/foyer/POWER"
+  command_topic: "cmnd/foyer/power"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Tall"
+  state_topic: "stat/familyroomlights/POWER"
+  command_topic: "cmnd/familyroomlights/power"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Fireplace"
+  state_topic: "stat/fireplace/POWER"
+  command_topic: "cmnd/fireplace/power"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+#
+# Kitchen Lights
+#
+
+- platform: mqtt
+  name: "Table"
+  state_topic: "stat/table/POWER"
+  command_topic: "cmnd/table/power"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Island"
+  state_topic: "stat/island/POWER"
+  command_topic: "cmnd/island/power"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+
+- platform: mqtt
+  name: "Top"
+  state_topic: "stat/kitchentop/POWER"
+  command_topic: "cmnd/kitchentop/power"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
+

@@ -1,0 +1,109 @@
+#######################################
+#                                     #
+# Customizations                      #
+#                                     #
+#######################################
+#
+#
+# Order the groups by tabs in the frontend
+#
+#
+  group.default_view:
+    order: 1
+  group.weathertab:
+    order: 2
+  group.rokutab:
+    order: 3
+  group.tvremotetab:
+    order: 4
+  group.onkyotab:
+    order: 5
+  group.xboxtab:
+    order: 6
+  group.melpotab:
+    order: 7
+#
+# Hide all switches group - dangerous
+#
+#
+  group.all_switches:
+    hidden: false
+#
+#
+# Not sure why we use a garage device class - maybe icons in front end change?
+#
+  cover.garage:
+    device_class: garage
+    friendly_name: Garage
+#
+#
+# Badge Sensors - changing label below the badge
+#
+#
+  sensor.garage_today:
+    unit_of_measurement: opens
+  sensor.sunrise_time:
+    unit_of_measurement: AM
+  sensor.sunset_time:
+    unit_of_measurement: PM
+#
+#
+# Weather Sensors - Display Name Changes
+#   note: escaping " requires single quotes
+#
+
+  sensor.speedtest_download:
+    friendly_name: Download Speed
+    icon: mdi:cloud-download
+  sensor.speedtest_upload:
+    friendly_name: Upload Speed
+    icon: mdi:cloud-upload
+  sensor.speedtest_ping:
+    friendly_name: Ping
+    icon: mdi:mixcloud
+  sensor.dark_sky_summary:
+    friendly_name: Next Hour
+  sensor.dark_sky_temperature:
+    friendly_name: Current Temperature
+  sensor.dark_sky_daily_high_temperature:
+    friendly_name: Today's High
+  sensor.dark_sky_daily_low_temperature:
+    friendly_name: Today's Low
+  sensor.dark_sky_precip:
+    friendly_name: Precipitation Type
+  sensor.dark_sky_precip_probability:
+    friendly_name: Probability of Precipitation
+  sensor.dark_sky_humidity:
+    friendly_name: Humidity
+  sensor.dark_sky_wind_speed:
+    friendly_name: Wind Speed
+  sensor.dark_sky_nearest_storm_distance:
+    friendly_name: Nearest Storm Distance
+  sensor.dark_sky_hourly_summary:
+    friendly_name: Next 48 Hours
+  sensor.dark_sky_daily_summary:
+    friendly_name: Upcoming Week
+  sensor.dark_sky_nearest_storm_bearing:
+    friendly_name: Nearest Storm Bearing
+  sensor.dark_sky_precip_intensity:
+    friendly_name: Precipitation Intensity
+  sensor.dark_sky_daily_max_precip_intensity:
+    friendly_name: Forecast Max - Precipitation Intensity
+  sensor.dark_sky_precip_accumulation:
+    friendly_name: Precipitation Accumulation
+  sensor.dark_sky_apparent_temperature:
+    friendly_name: '"Feels Like"'
+  sensor.dark_sky_cloud_coverage:
+    friendly_name: Cloud Cover
+  sensor.dark_sky_pressure:
+    friendly_name: Pressure
+  sensor.dark_sky_ozone:
+    friendly_name: Ozone
+  sensor.dark_sky_daily_high_apparent_temperature:
+    friendly_name: '"Feels Like" - Forecast Max'
+  sensor.dark_sky_daily_low_apparent_temperature:
+    friendly_name: '"Feels Like" - Forecast Min'
+  sensor.dark_sky_uv_index:
+    friendly_name:  UV Index
+
+

@@ -1,0 +1,7 @@
+rm -f www/YAMLs-*.tar
+
+today=`date +%Y-%m-%d`
+
+
+
+tar -cvf www/YAMLs-$today.tar *.yaml broadlink/*.yaml group/*.yaml excluded-FULL-remotes/

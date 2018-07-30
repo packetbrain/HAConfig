@@ -1,0 +1,12 @@
+  RokuTab:
+    name: Roku
+    control: hidden
+    view: yes
+    entities:
+      - media_player.rokufr
+      - media_player.panasonic_viera
+      - switch.sound_mute
+      - switch.sound_volumedown
+      - switch.sound_volumeup
+      - switch.tv_mute
+

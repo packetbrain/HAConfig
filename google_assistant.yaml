@@ -1,0 +1,28 @@
+#######################################
+#                                     #
+# Google Assistant                    #
+#                                     #
+#######################################
+#
+#
+# Split out google assistant config to avoid mistakes
+#   cleaner config here will let you control domains better also
+#
+#
+  project_id: !secret goog_project_id
+  client_id: !secret goog_client_id
+  access_token: !secret goog_access_token
+  agent_user_id: !secret goog_agent_user_id
+  api_key: !secret goog_api_key
+  expose_by_default: true
+  exposed_domains:
+    - switch
+    - light
+    - group
+    - script
+  entity_config:
+    light.foyer:
+      name: foyer
+      aliases:
+        - entry lights
+

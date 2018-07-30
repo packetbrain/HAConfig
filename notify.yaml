@@ -1,0 +1,36 @@
+#######################################
+#                                     #
+# Notifiers                           #
+#                                     #
+#######################################
+#
+# Each Alexa is listed as a notifier
+#   using a command line bash script to hack the Amazon API
+#   commands/scripts use Docker relative paths here and inside the scripts
+#
+#
+- platform: command_line
+  name: 'Office'
+  command: "/certs/alexa_wrapper.sh -d 'Office'"
+- platform: command_line
+  name: 'Kitchen'
+  command: "/certs/alexa_wrapper.sh -d 'Kitchen'"
+- platform: command_line
+  name: 'Brandon'
+  command: "/certs/alexa_wrapper.sh -d 'Brandon'"
+- platform: command_line
+  name: 'Bedroom'
+  command: "/certs/alexa_wrapper.sh -d 'Bedroom'"
+#
+#
+# This is a "notifier group" of the 4 Alexas in the house
+#
+#
+- name: alexas
+  platform: group
+  services:
+    - service: office
+    - service: kitchen
+    - service: brandon
+    - service: bedroom
+

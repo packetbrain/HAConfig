@@ -1,0 +1,62 @@
+  WeatherTab:
+    name: Weather
+    view: yes
+#    order: 2
+    control: hidden
+    entities:
+      - group.weathersnapshot
+      - group.weathercam
+      - group.weatherforecast
+      - group.weatherprecip
+      - group.weathermore
+
+
+  WeatherSnapshot:
+    name: Weather Snapshot
+    control: hidden
+    entities:
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_nearest_storm_distance
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_cloud_coverage
+
+  WeatherPrecip:
+    name: Weather - Precipitation
+    control: hidden
+    entities:
+      - sensor.dark_sky_nearest_storm_distance
+      - sensor.dark_sky_nearest_storm_bearing
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_precip
+      - sensor.dark_sky_precip_intensity
+      - sensor.dark_sky_daily_max_precip_intensity
+      - sensor.dark_sky_precip_accumulation
+
+  WeatherForecast:
+    name: Weather Forecasts
+    control: hidden
+    entities:
+      - sensor.dark_sky_hourly_summary
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_daily_high_apparent_temperature
+      - sensor.dark_sky_daily_low_apparent_temperature
+
+  WeatherMore:
+    name: Weather - More Info
+    control: hidden
+    entities:
+      - sensor.dark_sky_pressure
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_ozone
+      - sensor.dark_sky_uv_index
+
+  WeatherCam:
+    name: Weather Cam
+    control: hidden
+    entities:
+      - camera.rdu
+

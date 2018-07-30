@@ -1,0 +1,8 @@
+https://dimagoltsman.github.io/Random-Broadlink-RM-Code-Generator/#
+
+lets you change the repeat count inside the broadlink packet
+
+neat
+
+tested and works!
+

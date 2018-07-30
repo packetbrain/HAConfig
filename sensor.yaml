@@ -1,0 +1,108 @@
+#######################################
+#                                     #
+# Sensors                             #
+#                                     #
+#######################################
+#
+#
+# Track the number of days left for a LetsEncrypt certificate - display as a badge
+#
+#
+- platform: command_line
+  name: SSL cert expiry
+  unit_of_measurement: days
+  scan_interval: 10800
+  command: "/config/ssl-cert-check -b -c /certs/cert.pem | awk '{ print $NF }'"
+#
+#
+# Tracking the Reed Switch until I feel comfortable with garage cover operation
+#
+#
+- platform: mqtt
+  name: "Reed Switch"
+  state_topic: "stat/garage/POWER2"
+  icon: mdi:nintendo-switch
+#
+#
+# Tracking the garage opens as a badge until I feel comfortable with garage cover 
+#   also checking out the count functionality with the history component
+#
+#
+- platform: history_stats
+  name: Garage today
+  entity_id: cover.garage
+  state: 'open'
+  type: count
+  start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+  end: '{{ now() }}'
+#
+#
+# Speedtest sensors for a custom card for network monitoring in the frontend
+#
+#
+- platform: speedtest
+  hour:
+    - 1
+    - 4
+    - 7
+    - 15
+    - 19
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+#
+#
+# Getting sunrise and sunset as badges
+#   DarkSky can also provide these, I think - but maybe not as badges?
+#   getting some practice with some complex formatting in value_templates here too
+#
+#
+- platform: template
+  sensors:
+    sunset_time:
+      value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
+      friendly_name: "Sunset"
+- platform: template
+  sensors:
+    sunrise_time:
+      value_template: '{% set timestamp = as_timestamp(states.sun.sun.attributes.next_rising) | timestamp_custom("%I:%M") %} {{ timestamp.lstrip("0") }}'
+      friendly_name: "Sunrise"
+#
+#
+# Loading a ton of DarkSky sensors
+#   may want to get rid of some of them later after checking them out
+#   note: at least 4 of these change names from below -> entity name
+#   The API allows 1000 calls a day for free... Im shooting for 100/day
+#   They will send you an email with a bill if you go over... 
+#
+#
+- platform: darksky
+  api_key: !secret darksky_api_key
+  units: auto
+  update_interval: '00:15'
+  monitored_conditions:
+    - summary
+    - temperature
+    - temperature_max
+    - temperature_min
+    - precip_type
+    - precip_probability
+    - humidity
+    - wind_speed
+    - nearest_storm_distance
+    - hourly_summary
+    - daily_summary
+    - nearest_storm_bearing
+    - precip_intensity
+    - precip_accumulation
+    - apparent_temperature
+    - cloud_cover
+    - pressure
+    - ozone
+    - apparent_temperature_max
+    - apparent_temperature_min
+    - precip_intensity_max
+    - uv_index
+
+

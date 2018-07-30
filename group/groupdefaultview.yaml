@@ -1,0 +1,52 @@
+  default_view:
+    view: yes
+#    order: 1
+    icon: mdi:home
+    name: Lights
+    entities:
+      - group.family_room
+      - group.garage
+      - group.kitchen
+      - group.internet_speed
+      - group.weathersnapshot
+#      - media_player.panasonic_viera
+      - sensor.sunrise_time
+      - sensor.sunset_time
+      - sensor.ssl_cert_expiry
+      - sensor.garage_today
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.speedtest_ping
+#      - counter.mycounter
+
+  Family_Room:
+    name: Family Room
+    entities:
+      - light.Foyer
+      - light.Tall
+      - light.Fireplace
+
+  Kitchen:
+    name: Kitchen
+    entities:
+      - light.Table
+      - light.Island
+      - light.Top
+
+  Garage:
+    name: Garage
+    control: hidden
+    icon: mdi:garage
+    entities:
+      - cover.garage
+      - sensor.reed_switch
+      - alert.garage
+      - input_number.temp
+
+  Internet_Speed:
+    name: Internet Speed
+    entities:
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.speedtest_ping
+

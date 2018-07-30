@@ -1,0 +1,178 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 66
+  unit_system: imperial
+  time_zone: America/New_York
+
+  customize: !include customize.yaml
+
+  customize_glob:
+    "switch.sound_*":
+#      assumed_state: false 
+      icon: mdi:power-socket-eu
+# while "assumed_state" did turn the remote controls into toggles... 
+#doesnt help the use case
+
+  customize_domain:
+    automation:
+      hidden: true
+
+
+
+
+automation: !include automation.yaml
+script: !include script.yaml
+light: !include light.yaml
+sensor: !include sensor.yaml
+notify: !include notify.yaml
+group: !include_dir_merge_named group/
+google_assistant: !include google_assistant.yaml
+
+
+
+
+frontend:
+api:
+sun:
+config:
+
+
+
+mqtt:
+  broker: 7.7.7.99
+  client_id: home-assistant-1
+#  user: cisco
+#  password: cisco
+
+
+
+http:
+  api_password: !secret http_api_pass
+  ssl_certificate: /certs/fullchain.pem
+  ssl_key: /certs/privkey.pem
+  base_url: !secret base_url
+
+
+
+logger:
+  default: debug
+  logs:
+    homeassistant.components.recorder.util: info
+    homeassistant.components.history: info
+
+
+
+history:
+  use_include_order: True
+  include:
+    entities:
+     - cover.garage
+     - light.Foyer
+     - light.Tall
+     - light.Fireplace
+     - light.Table
+     - light.Island
+     - light.Top
+     - sun.sun
+     - sensor.speedtest_download
+     - sensor.speedtest_upload
+     - sensor.speedtest_ping
+
+
+panel_iframe:
+  radar_embed:
+    title: 'Weather Radar'
+    icon: mdi:weather-snowy-rainy
+    url: !secret darksky_radar_url
+
+  graphbar_embed:
+    title: '24 Hr. Forecast'
+    icon: mdi:weather-sunset-up
+    url: !secret darksky_graphbar_url
+
+  default_embed:
+    title: '7 Day Forecast'
+    icon: mdi:calendar
+    url: !secret darksky_7day_url
+
+
+
+camera:
+  platform: generic
+  name: RDU
+#  limit_refetch_to_url_change: true
+  still_image_url: !secret camera.rdu_still_image_url
+
+
+
+alert:
+  garage:
+    name: Garage open 30 minutes
+    entity_id: cover.garage
+    state: 'open'   # Optional, 'on' is the default value
+    repeat: 30
+    can_acknowledge: true  # Optional, default is true
+    skip_first: true  # Optional, false is the default
+    notifiers:
+      - alexas
+
+
+
+input_number:
+  temp:
+    name: A/C Setting
+    initial: 74
+    min: 60
+    max: 99
+    step: 1
+
+
+
+cover:
+  - platform: mqtt
+    name: "Garage"
+# the "2" below is set by the "switchtopic" command - can be any number/word
+#    state_topic: "cmnd/2/POWER2"
+    state_topic: "stat/garage/POWER2"
+    command_topic: "cmnd/garage/power1"
+    availability_topic: "tele/garage/LWT"
+#all three of these are ON - because the Tasmota just sends a pulse
+    payload_open: "ON"
+    payload_close: "ON"
+    payload_stop: "ON"
+#you can actually customize the state paylods from Tasmota with "StateTextx"
+    state_open: "ON"
+    state_closed: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    optimistic: false
+    retain: false
+
+
+
+
+media_player:
+  - platform: panasonic_viera
+    host: 7.7.7.242
+  - platform: roku
+    host: 7.7.7.243
+
+
+
+counter:
+  mycounter:
+    initial: 30
+    step: 1
+
+
+
+switch:
+  - platform: broadlink
+    host: 7.7.5.66
+    mac: 34:ea:34:e3:af:7f 
+    timout: 5
+    switches:
+      !include_dir_merge_named broadlink
+

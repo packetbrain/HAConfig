@@ -1,0 +1,260 @@
+'panasonicvt65_discrete_input___composite_1':
+  friendly_name: "PanasonicVT65_Discrete Input - Composite 1"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_discrete_input___composite_2':
+  friendly_name: "PanasonicVT65_Discrete Input - Composite 2"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_discrete_input___composite_3':
+  friendly_name: "PanasonicVT65_Discrete Input - Composite 3"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODg4ODg4ODg4OKg4qDg4ODg4ODg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_tv_video':
+  friendly_name: "PanasonicVT65_TV/VIDEO"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4OKg4ODg4ODg4ODg4OKg4ODioODg4ODg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_picture_menu':
+  friendly_name: "PanasonicVT65_Picture Menu"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioOKg4ODg4ODg4ODg4ODg4qDioODg4ODg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_sound_select':
+  friendly_name: "PanasonicVT65_Sound Select"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioOKg4ODg4ODg4ODg4OKg4qDioODg4ODg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_sleep':
+  friendly_name: "PanasonicVT65_Sleep"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioOKg4qDg4ODg4ODg4OKg4qDioOKg4ODg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_1':
+  friendly_name: "PanasonicVT65_1"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODioODg4ODg4ODg4ODg4ODg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_2':
+  friendly_name: "PanasonicVT65_2"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODioODg4ODg4OKg4ODg4ODg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_3':
+  friendly_name: "PanasonicVT65_3"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioODg4ODioODg4ODg4ODg4qDg4ODg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_4':
+  friendly_name: "PanasonicVT65_4"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4OKg4qDg4ODg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_5':
+  friendly_name: "PanasonicVT65_5"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODioODg4ODg4ODg4ODioODg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_6':
+  friendly_name: "PanasonicVT65_6"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4OKg4ODioODg4ODg4OKg4ODioODg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_7':
+  friendly_name: "PanasonicVT65_7"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioOKg4ODioODg4ODg4ODg4qDioODg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_8':
+  friendly_name: "PanasonicVT65_8"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioOKg4ODioODg4ODg4OKg4qDioODg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_9':
+  friendly_name: "PanasonicVT65_9"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODg4ODg4ODg4OKg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_0':
+  friendly_name: "PanasonicVT65_0"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDioODg4ODg4OKg4ODg4OKg4qDg4ODg4qDgAJlQ0F'
+  
+'panasonicvt65_vol_plus':
+  friendly_name: "PanasonicVT65_VOL+"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODioODg4qDgAJlQ0F'
+  
+'panasonicvt65_vol_':
+  friendly_name: "PanasonicVT65_VOL-"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4OKg4ODg4OKg4ODg4ODg4ODioODg4qDgAJlQ0F'
+  
+'panasonicvt65_mute':
+  friendly_name: "PanasonicVT65_Mute"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioODg4ODioOKg4ODg4ODg4qDg4ODg4qDioODg4qDgAJlQ0F'
+  
+'panasonicvt65_sap':
+  friendly_name: "PanasonicVT65_SAP"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioOKg4ODg4OKg4qDg4ODg4qDioODg4qDgAJlQ0F'
+  
+'panasonicvt65_ch_plus':
+  friendly_name: "PanasonicVT65_CH+"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODioOKg4ODg4ODg4ODioODg4qDioODg4qDgAJlQ0F'
+  
+'panasonicvt65_ch_':
+  friendly_name: "PanasonicVT65_CH-"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4OKg4ODioOKg4ODg4OKg4ODioODg4qDioODg4qDgAJlQ0F'
+  
+'panasonicvt65_r_tune___last_channel':
+  friendly_name: "PanasonicVT65_R-TUNE - Last Channel"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioOKg4ODioOKg4ODg4OKg4qDioODg4qDioODg4qDgAJlQ0F'
+  
+'panasonicvt65_recall___info___display':
+  friendly_name: "PanasonicVT65_Recall - Info - Display"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDioOKg4ODg4OKg4ODg4OKg4qDioODg4qDgAJlQ0F'
+  
+'panasonicvt65_power':
+  friendly_name: "PanasonicVT65_Power"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4OKg4qDioOKg4ODg4OKg4ODioOKg4qDioODg4qDgAJlQ0F'
+  
+'panasonicvt65_discrete_input___power_on':
+  friendly_name: "PanasonicVT65_Discrete Input - Power On"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioOKg4qDioOKg4ODg4ODg4qDioOKg4qDioODg4qDgAJlQ0F'
+  
+'panasonicvt65_discrete_power_off':
+  friendly_name: "PanasonicVT65_Discrete Power Off"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioOKg4qDioOKg4ODg4OKg4qDioOKg4qDioODg4qDgAJlQ0F'
+  
+'panasonicvt65_contrast_up':
+  friendly_name: "PanasonicVT65_Contrast Up"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_contrast_dn':
+  friendly_name: "PanasonicVT65_Contrast Dn"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODg4ODg4qDg4OKg4qDg4ODg4ODg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_brightness_up':
+  friendly_name: "PanasonicVT65_Brightness Up"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4qDg4ODg4ODioODg4ODg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_brightness_down':
+  friendly_name: "PanasonicVT65_Brightness Down"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4OKg4ODg4ODg4qDg4OKg4ODioODg4ODg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_select':
+  friendly_name: "PanasonicVT65_Select"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4qDg4OKg4ODg4OKg4ODg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_up':
+  friendly_name: "PanasonicVT65_Up"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioODg4qDg4ODg4qDg4ODg4qDg4OKg4ODg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_down':
+  friendly_name: "PanasonicVT65_Down"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioODg4qDg4ODg4qDg4OKg4qDg4OKg4ODg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_left':
+  friendly_name: "PanasonicVT65_Left"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioOKg4qDg4ODg4qDg4ODg4qDioOKg4ODg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_right':
+  friendly_name: "PanasonicVT65_Right"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioOKg4qDg4ODg4qDg4OKg4qDioOKg4ODg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_picture_select':
+  friendly_name: "PanasonicVT65_Picture Select"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODioODg4qDg4ODg4ODg4ODg4qDg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_sound_menu':
+  friendly_name: "PanasonicVT65_Sound Menu"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODioODg4qDg4OKg4ODg4ODg4qDg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_menu':
+  friendly_name: "PanasonicVT65_Menu"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioODg4ODioODg4qDg4ODg4qDg4ODg4qDg4OKg4qDgAJlQ0F'
+  
+'panasonicvt65_tuning':
+  friendly_name: "PanasonicVT65_Tuning"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4qDg4OKg4qDg4ODg4ODioOKg4ODioOKg4qDgAJlQ0F'
+  
+'panasonicvt65_color_button___red':
+  friendly_name: "PanasonicVT65_Color Button - Red"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODioOKg4qDg4ODg4ODg4ODg4qDioOKg4qDgAJlQ0F'
+  
+'panasonicvt65_color_button___green':
+  friendly_name: "PanasonicVT65_Color Button - Green"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODioOKg4qDg4OKg4ODg4ODg4qDioOKg4qDgAJlQ0F'
+  
+'panasonicvt65_color_button___yellow':
+  friendly_name: "PanasonicVT65_Color Button - Yellow"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioODg4ODioOKg4qDg4ODg4qDg4ODg4qDioOKg4qDgAJlQ0F'
+  
+'panasonicvt65_color_button___blue':
+  friendly_name: "PanasonicVT65_Color Button - Blue"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioOKg4qDg4OKg4qDg4ODg4qDioOKg4qDgAJlQ0F'
+  
+'panasonicvt65_discrete_input___pc':
+  friendly_name: "PanasonicVT65_Discrete Input - PC"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioODg4qDioOKg4qDg4ODg4qDg4OKg4qDioOKg4qDgAJlQ0F'
+  
+'panasonicvt65_discrete_input___component_1':
+  friendly_name: "PanasonicVT65_Discrete Input - Component 1"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4ODg4ODg4OKg4qDioOKg4qDg4ODg4ODg4OKg4qDioOKg4qDgAJlQ0F'
+  
+'panasonicvt65_discrete_input___component_2':
+  friendly_name: "PanasonicVT65_Discrete Input - Component 2"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4ODg4qDg4OKg4qDioOKg4qDg4OKg4ODg4OKg4qDioOKg4qDgAJlQ0F'
+  
+'panasonicvt65_apps':
+  friendly_name: "PanasonicVT65_Apps"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4qDioOKg4qDg4ODg4ODioODg4qDioODg4ODg4ODg4ODgAJlQ0F'
+  
+'panasonicvt65_viera_cast':
+  friendly_name: "PanasonicVT65_Viera Cast"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4qDioODg4ODioODg4ODioODg4qDg4OKg4qDg4ODg4ODgAJlQ0F'
+  
+'panasonicvt65_home':
+  friendly_name: "PanasonicVT65_Home"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4qDg4OKg4ODioODg4ODioODg4ODioOKg4qDg4ODg4ODgAJlQ0F'
+  
+'panasonicvt65_sub_menu':
+  friendly_name: "PanasonicVT65_Sub Menu"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4qDioOKg4ODg4OKg4ODioODg4qDioOKg4ODioODg4ODgAJlQ0F'
+  
+'panasonicvt65_media_player':
+  friendly_name: "PanasonicVT65_Media Player"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4qDioODg4qDg4OKg4ODioODg4qDg4ODg4ODioODg4ODgAJlQ0F'
+  
+'panasonicvt65_favorite_channel':
+  friendly_name: "PanasonicVT65_Favorite Channel"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4ODioOKg4qDg4OKg4ODioOKg4qDioODg4ODioODg4ODgAJlQ0F'
+  
+'panasonicvt65_discrete_input___hdmi_1':
+  friendly_name: "PanasonicVT65_Discrete Input - HDMI 1"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioOKg4ODioODg4ODioODg4qDioODg4ODgAJlQ0F'
+  
+'panasonicvt65_discrete_input___hdmi_2':
+  friendly_name: "PanasonicVT65_Discrete Input - HDMI 2"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4ODg4qDg4ODg4ODioOKg4ODioOKg4ODioODg4qDioODg4ODgAJlQ0F'
+  
+'panasonicvt65_viera_link':
+  friendly_name: "PanasonicVT65_Viera Link"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4qDg4ODg4ODioOKg4ODioODg4ODg4OKg4qDioODg4ODgAJlQ0F'
+  
+'panasonicvt65_discrete_input___hdmi_3':
+  friendly_name: "PanasonicVT65_Discrete Input - HDMI 3"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4ODg4ODioODg4ODioOKg4ODioODg4qDioODg4qDioODg4ODgAJlQ0F'
+  
+'panasonicvt65_3d':
+  friendly_name: "PanasonicVT65_3D"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4qDioOKg4ODioOKg4ODioODg4qDioOKg4qDioODg4ODgAJlQ0F'
+  
+'panasonicvt65_prog____sub_channel_dash':
+  friendly_name: "PanasonicVT65_PROG- - Sub-Channel Dash"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODioODg4qDioODg4ODg4ODg4qDg4OKg4ODgAJlQ0F'
+  
+'panasonicvt65_exit':
+  friendly_name: "PanasonicVT65_Exit"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4qDioOKg4qDg4ODg4qDg4OKg4ODgAJlQ0F'
+  
+'panasonicvt65_return':
+  friendly_name: "PanasonicVT65_Return"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODioODg4qDioODg4ODioODg4qDg4OKg4ODgAJlQ0F'
+  
+'panasonicvt65_aspect_ratio_change':
+  friendly_name: "PanasonicVT65_Aspect Ratio Change"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4ODg4ODioOKg4qDioODg4qDioODg4qDg4OKg4qDg4OKg4ODgAJlQ0F'
+  
+'panasonicvt65_viera_tools':
+  friendly_name: "PanasonicVT65_Viera Tools"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4qDioOKg4qDg4OKg4qDioOKg4qDioOKg4ODioOKg4ODgAJlQ0F'
+  
+'panasonicvt65_netflix':
+  friendly_name: "PanasonicVT65_Netflix"
+  command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4ODioODg4ODioOKg4qDioOKg4qDg4OKg4qDioOKg4ODgAJlQ0F'
+  

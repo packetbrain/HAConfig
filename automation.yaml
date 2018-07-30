@@ -1,0 +1,127 @@
+#######################################
+#                                     #
+# Automations                         #
+#                                     #
+#######################################
+#
+# 
+# This automation pushes empty payload MQTT commands to all Sonoffs (group topic=sonoffs)
+# to read their state - which technically HA isnt designed to do.. up to the broker
+# add more lines like these if you have any devices with 3 or more relays
+#
+#
+- alias: "Power state on HA start-up"
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/sonoffs/power1"
+        payload: ""
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/sonoffs/power2"
+        payload: ""
+#
+#
+# Sends a message to all Alexas if the garage has been open 2hrs
+# can only trigger during the day time because of next automation
+#
+#
+- alias: "garageopen2hrs"
+  trigger:
+    platform: state
+    entity_id: cover.garage
+    to: 'open'
+    for:
+      minutes: 120
+#      minutes: 1
+#  condition:
+#    condition: template
+#    value_template: '{{ as_timestamp(now()) - as_timestamp(states.automation.garageopen2hrs.attributes.last_triggered) | int > 3000 }}'
+# this condition being tested - to prevent excessive alerts... prob better on an "alert"
+  action:
+    service: notify.alexas
+    data:
+      message: "This is a reminder to close the garage door,  It has been open for 2 hours!"
+#
+#
+# Closes the garage after 10 minutes any time after sunset
+#
+# note: multiple triggers use OR criterion, not AND
+#       multiple conditions can be programmed with OR/AND logic
+#
+#
+- alias: "garageopenaftersunset"
+  trigger:
+    - platform: state
+      entity_id: cover.garage
+      to: 'open'
+      for:
+#        minutes: 1
+        minutes: 10
+  condition:
+    - condition: sun
+      after: sunset
+      after_offset: '-00:30:00'
+  action:
+    - service: notify.alexas
+      data:
+        message: "Closing the garage door,  It is open after sunset"
+    - service: cover.close_cover
+      entity_id: cover.garage
+#
+#
+# Turns the Onkyo off when TV is turned off via HA
+#
+#
+- alias: "Audio off with TV"
+  initial_state: 'on'
+  trigger:
+      - platform: state
+        entity_id: switch.tv_off
+        to: 'on'
+        for:
+          seconds: 5
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.sound_off
+    - service: homeassistant.turn_off
+      entity_id: switch.tv_off
+#
+#
+# Turns the Onkyo on when TV is turned on via HA
+#
+#
+- alias: "Audio on with TV"
+  initial_state: 'on'
+  trigger:
+      - platform: state
+        entity_id: switch.tv_on
+        to: 'on'
+        for:
+          seconds: 5
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.sound_on
+    - service: script.mutetv
+    - service: homeassistant.turn_off
+      entity_id: switch.tv_on
+#
+#
+# sample entry below for simple timer based automations
+#
+#
+#- alias: "Foyer timer"
+#  initial_state: 'on'
+#  trigger:
+#    - platform: state
+#      entity_id: switch.Foyer
+#      to: 'on'
+#      for:
+#        minutes: 60
+#  action:
+#    service: homeassistant.turn_off
+#    entity_id: switch.Foyer
+

@@ -1,0 +1,175 @@
+#######################################
+#                                     #
+# Scripts                             #
+#                                     #
+#######################################
+#
+#
+# Xbox uses RC6 IR protocol - two codes sent for ON/OFF 
+#   the two codes only differ by a toggle bit
+#
+#
+xboxon:
+  alias: "Xbox ON"
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.xbox_discrete_power_on1
+    - service: homeassistant.turn_on
+      entity_id: switch.xbox_discrete_power_on2
+    - service: homeassistant.turn_on
+      entity_id: switch.xbox_discrete_power_on1
+    - service: homeassistant.turn_on
+      entity_id: switch.xbox_discrete_power_on2
+#
+xboxoff:
+  alias: "Xbox OFF"
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.xbox_discrete_power_off1
+    - service: homeassistant.turn_on
+      entity_id: switch.xbox_discrete_power_off2
+    - service: homeassistant.turn_on
+      entity_id: switch.xbox_discrete_power_off1
+    - service: homeassistant.turn_on
+      entity_id: switch.xbox_discrete_power_off2
+#
+#
+# Turn the volume down 35 steps to 0 on Panasonic
+#    can shorten this with some "repeat count" in the IR code itself
+#
+#
+mutetv:
+  alias: "Mute TV"
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_minus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_minus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_minus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_minus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_minus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_minus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_minus5
+#
+#
+# 1. Turn on TV
+# 2. Turn on Onkyo - Video1
+# 3. Turn on Netflix
+# 4. Wait 27 seconds and jam all the way left
+# 5. Hit OK to login as Ken
+#
+#
+netflixken:
+  alias: "Netflix Ken"
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_on
+    - delay:
+        seconds: 5 
+    - service: homeassistant.turn_on
+      entity_id: switch.sound_video1
+    - delay:
+        seconds: 5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_netflix
+    - delay:
+        seconds: 27
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 3
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 3
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 2
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_ok
+#
+#
+# 1. Turn on TV
+# 2. Turn off Onkyo
+# 3. Turn on Netflix
+# 4. Set TV volume to 24 for Simon
+# 5. Wait 20 seconds and jam all the way left
+# 5. Then move two to the right and hit OK to login as Simon
+#
+#
+netflixsimon:
+  alias: "Netflix Simon"
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_on
+    - delay:
+        seconds: 8 
+    - service: homeassistant.turn_on
+      entity_id: switch.sound_off
+    - delay:
+        seconds: 2
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_netflix
+    - delay:
+        seconds: 11 
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_plus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_plus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_plus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_plus5
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_vol_minus
+    - delay:
+        seconds: 20
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 3
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 3
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_left
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_right
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_right
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_on
+      entity_id: switch.tv_ok
+

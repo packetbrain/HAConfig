@@ -1,0 +1,17 @@
+*
+!*.yaml
+!broadlink
+!group
+!excluded-FULL-remotes
+!ssl-cert-check
+!drh
+!backupYAML.ken.exe
+!tasmoweb.exe
+!pronto2broadlink.py
+!IR-repeat-count-URL-broadlink.txt
+!.gitignore
+certs
+home-assistant_v2.db
+secrets.yaml
+www
+

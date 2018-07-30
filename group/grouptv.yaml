@@ -1,0 +1,55 @@
+  TVRemoteTab:
+    name: TV Remote
+    view: yes
+#    order: 3
+    entities:
+      - group.tv_power
+      - group.tv_volume
+      - group.tv_menus
+      - group.tv_inputs
+
+
+  TV_Menus:
+    control: hidden
+    name: Menu Control
+    entities:
+      - switch.tv_up
+      - switch.tv_down
+      - switch.tv_left
+      - switch.tv_right
+      - switch.tv_ok
+      - switch.tv_back
+      - switch.tv_exit
+      - switch.tv_menu
+
+  TV_Volume:
+    control: hidden
+    name: Volume Control
+    entities:
+      - switch.test
+      - switch.tv_vol_plus
+      - switch.tv_vol_minus
+      - switch.tv_vol_plus5
+      - switch.tv_vol_minus5
+      - switch.tv_mute
+
+  TV_Power:
+    control: hidden
+    name: Power Control
+    entities:
+      - switch.tv_on
+      - switch.tv_off
+      - switch.tv_sleep
+
+  TV_Inputs:
+    control: hidden
+    name: Change Input Source
+    entities:
+      - switch.tv_netflix
+      - switch.tv_hdmi_1
+      - switch.tv_hdmi_2
+      - switch.tv_hdmi_3
+      - switch.tv_media_player
+      - switch.tv_apps
+
+
