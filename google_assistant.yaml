@@ -14,40 +14,34 @@
   access_token: !secret goog_access_token
   agent_user_id: !secret goog_agent_user_id
   api_key: !secret goog_api_key
-  expose_by_default: false
+#
+#
+# The logic on this code is whacked... expose must be set to true
+# so that you can then "whitelist" with "exposed_domains"
+#
+# any entities still not exposed after that check.. 
+# can be exposed one by one in entity_config
+#
+#
+  expose_by_default: true
   exposed_domains:
     - light
     - script
-    - switch
+    - cover
+#    - switch
 #    - group
   entity_config:
     light.foyer:
       name: foyer
-      expose: true
+#      expose: true
       aliases:
-        - entry lights
-    light.fireplace:
-      expose: true
-    light.island:
-      expose: true
-    light.table:
-      expose: true
-    light.tall:
-      expose: true
-    light.top:
-      expose: true
-    cover.garage:
-      expose: true
-    script.netflixken:
-      expose: true
-    script.netflixsimon:
-      expose: true
-    script.mutetv:
-      expose: true
-    script.xboxoff:
-      expose: true
-    script.xboxon:
-      expose: true
+        - the bomb trigger
+# GA only accepts one alias per entity
+# and GA *always* uses the alias name when it speaks
+# even though you can use either name
+#        - larry
+#        - moe
+#        - curly
     group.family_room:
       expose: true
     group.kitchen:
@@ -70,7 +64,14 @@
       expose: true
     switch.tv_netflix:
       expose: true
-    sensor.reed_switch:
-      expose: true
+# sensors are not picked up by GA component
+#    sensor.reed_switch:
+#      expose: true
+#    sensor.reed_switch:
+#      expose: true
+#      type: switch
+#      alias: myreed
+#    switch.reed_switch:
+#      expose: true
       
 

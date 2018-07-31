@@ -48,10 +48,18 @@
     unit_of_measurement: PM
 #
 #
-# Weather Sensors - Display Name Changes
-#   note: escaping " requires single quotes
+# Trying to make a sensor sync with google as a "switch"
+#   so google can tell me its status
 #
-
+#
+  sensor.reed_switch:
+    google_assistant: true
+    google_assistant_type: switch
+#
+#
+# Network Sensors - Display Name Changes
+#
+#
   sensor.speedtest_download:
     friendly_name: Download Speed
     icon: mdi:cloud-download
@@ -61,6 +69,11 @@
   sensor.speedtest_ping:
     friendly_name: Ping
     icon: mdi:mixcloud
+#
+#
+# Weather Sensors - Display Name Changes
+#   note: escaping " requires single quotes
+#
   sensor.dark_sky_summary:
     friendly_name: Next Hour
   sensor.dark_sky_temperature:
@@ -105,5 +118,32 @@
     friendly_name: '"Feels Like" - Forecast Min'
   sensor.dark_sky_uv_index:
     friendly_name:  UV Index
-
+#
+#
+# This section is for whitelisting devices for Alexa
+# that are not customize_domain exposed via light, script, or cover
+#
+#
+  group.family_room:
+    haaska_hidden: false
+  group.kitchen:
+    haaska_hidden: false
+  switch.tv_on:
+    haaska_hidden: false
+  switch.tv_off:
+    haaska_hidden: false
+  switch.tv_ok:
+    haaska_hidden: false
+  switch.onkyo_on:
+    haaska_hidden: false
+  switch.onkyo_off:
+    haaska_hidden: false
+  switch.onkyo_video1:
+    haaska_hidden: false
+  switch.onkyo_video2:
+    haaska_hidden: false
+  switch.onkyo_mute:
+    haaska_hidden: false
+  switch.tv_netflix:
+    haaska_hidden: false
 
