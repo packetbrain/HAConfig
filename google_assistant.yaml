@@ -14,15 +14,63 @@
   access_token: !secret goog_access_token
   agent_user_id: !secret goog_agent_user_id
   api_key: !secret goog_api_key
-  expose_by_default: true
+  expose_by_default: false
   exposed_domains:
-    - switch
     - light
-    - group
     - script
+    - switch
+#    - group
   entity_config:
     light.foyer:
       name: foyer
+      expose: true
       aliases:
         - entry lights
+    light.fireplace:
+      expose: true
+    light.island:
+      expose: true
+    light.table:
+      expose: true
+    light.tall:
+      expose: true
+    light.top:
+      expose: true
+    cover.garage:
+      expose: true
+    script.netflixken:
+      expose: true
+    script.netflixsimon:
+      expose: true
+    script.mutetv:
+      expose: true
+    script.xboxoff:
+      expose: true
+    script.xboxon:
+      expose: true
+    group.family_room:
+      expose: true
+    group.kitchen:
+      expose: true
+    switch.tv_on:
+      expose: true
+    switch.tv_off:
+      expose: true
+    switch.tv_ok:
+      expose: true
+    switch.onkyo_on:
+      expose: true
+    switch.onkyo_off:
+      expose: true
+    switch.onkyo_video1:
+      expose: true
+    switch.onkyo_video2:
+      expose: true
+    switch.onkyo_mute:
+      expose: true
+    switch.tv_netflix:
+      expose: true
+    sensor.reed_switch:
+      expose: true
+      
 

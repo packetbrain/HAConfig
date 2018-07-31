@@ -4,7 +4,7 @@
     view: yes
     entities:
       - media_player.rokufr
-      - media_player.panasonic_viera
+      - media_player.panasonic_viera_tv
       - switch.onkyo_mute
       - switch.onkyo_volumedown
       - switch.onkyo_volumeup

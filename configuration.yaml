@@ -11,6 +11,7 @@ homeassistant:
   customize_glob:
     "switch.tv_*":
       icon: mdi:power-socket-eu
+      google_assistant: true   
     "switch.onkyo_*":
 #      assumed_state: false 
       icon: mdi:power-socket-eu
@@ -35,10 +36,18 @@ google_assistant: !include google_assistant.yaml
 
 
 
-frontend:
 api:
 sun:
 config:
+
+
+
+frontend:
+  themes:
+    Mom:
+      primary-color: pink
+    Dad:
+      primary-color: blue
 
 
 
@@ -63,6 +72,14 @@ logger:
   logs:
     homeassistant.components.recorder.util: info
     homeassistant.components.history: info
+    homeassistant.components.websocket_api: info
+#    homeassistant.components.media_player: info
+#    homeassistant.components.roku: info
+#    homeassistant.components.media_player.roku: info
+#    homeassistant.components.panasonic_viera: info
+#    homeassistant.components.media_player.panasonic_viera: info
+# none of the above worked to quiet the noisy media players
+# i will just remove them from config entirely while testing google
 
 
 
@@ -158,8 +175,9 @@ cover:
 media_player:
 #  - platform: panasonic_viera
 #    host: 7.7.7.242
-  - platform: roku
-    host: 7.7.7.243
+#    mac: 8c:c1:21:60:26:0b
+#  - platform: roku
+#    host: 7.7.7.243
 
 
 

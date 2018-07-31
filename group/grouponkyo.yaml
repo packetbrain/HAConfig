@@ -14,8 +14,8 @@
     control: hidden
     name: Power Control
     entities:
-      - switch.onkyo_off
       - switch.onkyo_on
+      - switch.onkyo_off
       - switch.onkyo_sleep
       - switch.onkyo_dimmer
 

@@ -9,7 +9,6 @@
       - group.kitchen
       - group.internet_speed
       - group.weathersnapshot
-#      - media_player.panasonic_viera
       - sensor.sunrise_time
       - sensor.sunset_time
       - sensor.ssl_cert_expiry
