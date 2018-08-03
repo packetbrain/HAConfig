@@ -1,0 +1,26 @@
+  PresenceTab:
+    name: Presence
+    view: yes
+    entities:
+      - group.people_presence
+      - group.device_presence
+
+  People_Presence:
+    control: hidden
+    name: People
+    entities:
+      - device_tracker.kenphone
+      - device_tracker.cibelephone
+      - device_tracker.brandonphone
+
+  Device_Presence:
+    control: hidden
+    name: Devices
+    entities:
+      - device_tracker.garage
+      - device_tracker.broadlink
+      - device_tracker.laptop
+      - device_tracker.nabi
+      - device_tracker.roku
+      - device_tracker.tv
+

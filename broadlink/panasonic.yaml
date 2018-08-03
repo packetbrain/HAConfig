@@ -83,14 +83,14 @@
   command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDioODg4ODioODg4ODg4ODg4qDioODg4qDg4OKg4ODioODg4qDg4ODg4ODioODg4ODgAJlQ0F'
   
 'tv_hdmi_1':
-  friendly_name: "TV HDMI 1"
+  friendly_name: "TV HDMI 1 (Xbox)"
   command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4ODg4ODg4ODg4ODioOKg4ODioODg4ODioODg4qDioODg4ODgAJlQ0F'
   
 'tv_hdmi_2':
-  friendly_name: "TV HDMI 2"
+  friendly_name: "TV HDMI 2 (Laptop)"
   command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4ODg4qDg4ODg4ODioOKg4ODioOKg4ODioODg4qDioODg4ODgAJlQ0F'
   
 'tv_hdmi_3':
-  friendly_name: "TV HDMI 3"
+  friendly_name: "TV HDMI 3 (Roku)"
   command_on: 'JgBmAHE4Dg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OKg4ODg4ODg4ODg4ODg4ODg4ODg4qDg4ODg4qDg4ODg4ODg4ODg4ODioODg4ODioOKg4ODioODg4qDioODg4qDioODg4ODgAJlQ0F'
   

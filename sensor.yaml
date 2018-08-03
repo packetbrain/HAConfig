@@ -9,7 +9,7 @@
 #
 #
 - platform: command_line
-  name: SSL cert expiry
+  name: SSL Cert Expiry
   unit_of_measurement: days
   scan_interval: 10800
   command: "/config/ssl-cert-check -b -c /certs/cert.pem | awk '{ print $NF }'"
@@ -29,7 +29,7 @@
 #
 #
 - platform: history_stats
-  name: Garage today
+  name: Garage Today
   entity_id: cover.garage
   state: 'open'
   type: count
@@ -104,5 +104,12 @@
     - apparent_temperature_min
     - precip_intensity_max
     - uv_index
-
+#
+#
+# Monitor size of the database for history/recorder
+#
+#
+- platform: filesize
+  file_paths:
+    - /config/home-assistant_v2.db
 

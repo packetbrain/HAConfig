@@ -4,4 +4,4 @@ today=`date +%Y-%m-%d`
 
 
 
-tar -cvf www/YAMLs-$today.tar *.yaml broadlink/*.yaml group/*.yaml excluded-FULL-remotes/
+tar -cvf www/YAMLs-$today.tar *.yaml broadlink/*.yaml group/*.yaml excluded-FULL-remotes/ www/*.html www/*.js panels/*

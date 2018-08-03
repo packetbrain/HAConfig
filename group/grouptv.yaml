@@ -1,7 +1,6 @@
   TVRemoteTab:
     name: TV Remote
     view: yes
-#    order: 3
     entities:
       - group.tv_power
       - group.tv_volume

@@ -16,6 +16,7 @@
       - sensor.speedtest_download
       - sensor.speedtest_upload
       - sensor.speedtest_ping
+      - sensor.homeassistant_v2db
 #      - counter.mycounter
 
   Family_Room:
@@ -41,6 +42,8 @@
       - sensor.reed_switch
       - alert.garage
       - input_number.temp
+#      - switch.garage_door
+# was for a templtae switch concept
 
   Internet_Speed:
     name: Internet Speed

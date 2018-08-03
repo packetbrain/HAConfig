@@ -33,4 +33,13 @@
     - service: kitchen
     - service: brandon
     - service: bedroom
+#
+#
+# This is the pushbullet app
+#
+#
+- name: pushbullet
+  platform: pushbullet
+  api_key: !secret pushbullet_api_key
+
 

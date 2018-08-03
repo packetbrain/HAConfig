@@ -20,17 +20,27 @@
     order: 5
   group.xboxtab:
     order: 6
-  group.melpotab:
+  group.devtab:
     order: 7
+  group.presencetab:
+    order: 8
 #
 # Hide all switches group - dangerous
-#
+#   need research - what is this hiding from?
 #
   group.all_switches:
-    hidden: false
+    hidden: true
+  group.all_automations:
+    hidden: true
+  group.all_covers:
+    hidden: true
+  group.all_scripts:
+    hidden: true
 #
 #
-# Not sure why we use a garage device class - maybe icons in front end change?
+# Use garage device class so that icons in front end change
+# ("window" looks different than "garage" - but both are covers)
+#
 #
   cover.garage:
     device_class: garage
@@ -69,6 +79,8 @@
   sensor.speedtest_ping:
     friendly_name: Ping
     icon: mdi:mixcloud
+  sensor.homeassistant_v2db:
+    friendly_name: History Database
 #
 #
 # Weather Sensors - Display Name Changes
@@ -124,26 +136,26 @@
 # that are not customize_domain exposed via light, script, or cover
 #
 #
-  group.family_room:
-    haaska_hidden: false
-  group.kitchen:
-    haaska_hidden: false
-  switch.tv_on:
-    haaska_hidden: false
-  switch.tv_off:
-    haaska_hidden: false
-  switch.tv_ok:
-    haaska_hidden: false
-  switch.onkyo_on:
-    haaska_hidden: false
-  switch.onkyo_off:
-    haaska_hidden: false
-  switch.onkyo_video1:
-    haaska_hidden: false
-  switch.onkyo_video2:
-    haaska_hidden: false
-  switch.onkyo_mute:
-    haaska_hidden: false
-  switch.tv_netflix:
-    haaska_hidden: false
+#  group.family_room:
+#    haaska_hidden: false
+#  group.kitchen:
+#    haaska_hidden: false
+#  switch.tv_on:
+#    haaska_hidden: false
+#  switch.tv_off:
+#    haaska_hidden: false
+#  switch.tv_ok:
+#    haaska_hidden: false
+#  switch.onkyo_on:
+#    haaska_hidden: false
+#  switch.onkyo_off:
+#    haaska_hidden: false
+#  switch.onkyo_video1:
+#    haaska_hidden: false
+#  switch.onkyo_video2:
+#    haaska_hidden: false
+#  switch.onkyo_mute:
+#    haaska_hidden: false
+#  switch.tv_netflix:
+#    haaska_hidden: false
 

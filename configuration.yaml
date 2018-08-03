@@ -5,6 +5,7 @@ homeassistant:
   elevation: 66
   unit_system: imperial
   time_zone: America/New_York
+  whitelist_external_dirs: /config
 
   customize: !include customize.yaml
 
@@ -32,16 +33,16 @@ homeassistant:
   customize_domain:
     automation:
       hidden: true
-    light:
-      haaska_hidden: false
-    script:
-      haaska_hidden: false
-    cover:
-      haaska_hidden: false
-    switch:
-      haaska_hidden: true
-    group:
-      haaska_hidden: true
+#    light:
+#      haaska_hidden: false
+#    script:
+#      haaska_hidden: false
+#    cover:
+#      haaska_hidden: false
+#    switch:
+#      haaska_hidden: true
+#    group:
+#      haaska_hidden: true
 
 #
 #
@@ -57,8 +58,8 @@ sensor: !include sensor.yaml
 notify: !include notify.yaml
 group: !include_dir_merge_named group/
 google_assistant: !include google_assistant.yaml
-
-
+alexa: !include alexa.yaml
+device_tracker: !include device_tracker.yaml
 
 
 api:
@@ -98,49 +99,97 @@ logger:
     homeassistant.components.recorder.util: info
     homeassistant.components.history: info
     homeassistant.components.websocket_api: info
-#    homeassistant.components.media_player: info
-#    homeassistant.components.roku: info
-#    homeassistant.components.media_player.roku: info
-#    homeassistant.components.panasonic_viera: info
-#    homeassistant.components.media_player.panasonic_viera: info
-# none of the above worked to quiet the noisy media players
-# i will just remove them from config entirely while testing google
-# you can prob use these other types from an automation "service" call
+    roku: info
+    panasonic_viera: info
 # see docs https://www.home-assistant.io/components/logger/
+# use whatever you see in square brackets in the log as the filter name here
 
 
-history:
-  use_include_order: True
+
+recorder:
+#number of history days to keep in recorder database after a purge.
+  purge_keep_days: 10
+# How often (in days) the purge task runs
+  purge_interval: 1
   include:
+    domains:
+      - light
+      - cover
+      - automation
+      - script
+      - sensor
+      - media_player
     entities:
-     - cover.garage
-     - light.Foyer
-     - light.Tall
-     - light.Fireplace
-     - light.Table
-     - light.Island
-     - light.Top
+     - group.family_room
+     - group.kitchen
      - sun.sun
      - sensor.speedtest_download
      - sensor.speedtest_upload
      - sensor.speedtest_ping
+# This should keep db size down a bit... 
+# used different domain/entity list for history and recorder components
+#   so that I could control display order for "history"
+
+
+
+history:
+  use_include_order: True
+#  hours_to_show: 48
+  include:
+#    domains:
+#      - light
+#      - cover
+    entities:
+     - cover.garage
+     - light.Table
+     - light.Island
+     - light.Top
+     - light.Fireplace
+     - light.Foyer
+     - light.Tall
+     - sun.sun
+     - sensor.speedtest_download
+     - sensor.speedtest_upload
+     - sensor.speedtest_ping
+# Note entities configured here are shown *before* a) their specific domains b) all domains
+# not counting sensors which are graphed below
+
+logbook:
+  include:
+    entities:
+      - group.kitchen
+      - group.family_room
+  exclude:
+    domains:
+      - group
+
 
 
 panel_iframe:
   radar_embed:
     title: 'Weather Radar'
     icon: mdi:weather-snowy-rainy
-    url: !secret darksky_radar_url
+    url: /local/darksky_radar.html
 
-  graphbar_embed:
+  graphbar:
     title: '24 Hr. Forecast'
     icon: mdi:weather-sunset-up
-    url: !secret darksky_graphbar_url
+    url: /local/darksky_graphbar.html
 
   default_embed:
     title: '7 Day Forecast'
     icon: mdi:calendar
-    url: !secret darksky_7day_url
+    url: /local/darksky_default.html
+
+
+
+#panel_custom:
+#  - name: reactpanel
+#    sidebar_title: Example
+#    sidebar_icon: mdi:checkbox-marked-outline
+#    url_path: weather
+#    js_url: 'https://darksky.net/widget/default/42.360082,-71.05888/us12/en.js'
+#    embed_iframe: true
 
 
 
@@ -187,7 +236,7 @@ cover:
     payload_open: "ON"
     payload_close: "ON"
     payload_stop: "ON"
-#you can actually customize the state paylods from Tasmota with "StateTextx"
+#you can actually customize the state payloads from Tasmota with "StateTextx"
     state_open: "ON"
     state_closed: "OFF"
     payload_available: "Online"
@@ -197,13 +246,17 @@ cover:
 
 
 
-
 media_player:
-#  - platform: panasonic_viera
-#    host: 7.7.7.242
-#    mac: 8c:c1:21:60:26:0b
-#  - platform: roku
-#    host: 7.7.7.243
+  - platform: panasonic_viera
+    host: 7.7.7.242
+    mac: 8c:c1:21:60:26:0b
+  - platform: roku
+    host: 7.7.7.243
+  - platform: plex
+    host: 7.7.7.99
+    show_all_controls: true
+    entity_namespace: 'plex'
+    use_custom_entity_ids: true
 
 
 
@@ -221,4 +274,29 @@ switch:
     timout: 5
     switches:
       !include_dir_merge_named broadlink
+
+  - platform: template
+    switches:
+      garage_door:
+        value_template: "{{ is_state('cover.garage', 'closed') }}"
+        turn_on:
+          service: cover.open_cover
+          data:
+            entity_id: cover.garage
+        turn_off:
+          service: cover.close_cover
+          data:
+            entity_id: cover.garage
+        icon_template: >-
+          {% if is_state('cover.garage', 'closed') %}
+            mdi:garage
+          {% else %}
+            mdi:garage-open
+          {% endif %}
+
+input_boolean:
+  switch_tv:
+    name: for testing lovelaceUI
+    initial: off
+    icon: mdi:car
 

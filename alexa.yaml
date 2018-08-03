@@ -1,0 +1,30 @@
+smart_home:
+  filter:
+    include_entities:
+      - group.family_room
+      - group.kitchen
+      - switch.tv_on
+      - switch.tv_off
+      - switch.tv_ok
+      - switch.onkyo_on
+      - switch.onkyo_off
+      - switch.onkyo_video1
+      - switch.onkyo_video2
+      - switch.onkyo_mute
+      - switch.tv_netflix
+      - switch.garage_door
+    include_domains:
+      - light
+      - script
+      - cover
+#      exclude_entities:
+#        - switch.outside
+#      exclude_domains:
+#        - group
+#    entity_config:
+#      light.kitchen:
+#        name: Custom Name for Alexa
+#        description: The light in the kitchen
+#      switch.stairs:
+#        display_categories: LIGHT
+

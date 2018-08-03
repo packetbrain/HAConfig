@@ -1,0 +1,11 @@
+- platform: ping
+  hosts:
+    laptop: 7.7.5.55
+    broadlink: 7.7.5.66
+    garage: 7.7.5.99
+    kenphone: 7.7.5.200
+    cibelephone: 7.7.5.201
+    brandonphone: 7.7.5.202
+    nabi: 7.7.5.210
+    tv: 7.7.7.242
+    roku: 7.7.7.243

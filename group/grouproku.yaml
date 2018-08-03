@@ -5,6 +5,8 @@
     entities:
       - media_player.rokufr
       - media_player.panasonic_viera_tv
+      - media_player.plex
+      - media_player.rokufr_2
       - switch.onkyo_mute
       - switch.onkyo_volumedown
       - switch.onkyo_volumeup

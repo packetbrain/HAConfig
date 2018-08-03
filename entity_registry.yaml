@@ -3,3 +3,13 @@ media_player.rokufr:
   name:
   platform: roku
   unique_id: YY004V334404
+media_player.rokufr_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 89414691f55fb13a88c91bca7f39ee09
+media_player.plex_plex_kty06hq3iuib117hpem3j3f9:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: kty06hq3iuib117hpem3j3f9

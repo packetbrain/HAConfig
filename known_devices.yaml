@@ -1,0 +1,72 @@
+
+laptop:
+  hide_if_away: false
+  icon:
+  mac:
+  name: laptop
+  picture:
+  track: true
+
+garage:
+  hide_if_away: false
+  icon:
+  mac:
+  name: garage
+  picture:
+  track: true
+
+cibelephone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: cibelephone
+  picture:
+  track: true
+
+brandonphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: brandonphone
+  picture:
+  track: true
+
+tv:
+  hide_if_away: false
+  icon:
+  mac:
+  name: tv
+  picture:
+  track: true
+
+roku:
+  hide_if_away: false
+  icon:
+  mac:
+  name: roku
+  picture:
+  track: true
+
+nabi:
+  hide_if_away: false
+  icon:
+  mac:
+  name: nabi
+  picture:
+  track: true
+
+kenphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: kenphone
+  picture:
+  track: true
+
+broadlink:
+  hide_if_away: false
+  icon:
+  mac:
+  name: broadlink
+  picture:
+  track: true

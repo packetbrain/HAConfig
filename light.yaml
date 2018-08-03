@@ -24,8 +24,8 @@
 
 - platform: mqtt
   name: "Tall"
-  state_topic: "stat/familyroomlights/POWER"
-  command_topic: "cmnd/familyroomlights/power"
+  state_topic: "stat/tall/POWER"
+  command_topic: "cmnd/tall/power"
   qos: 0
   payload_on: "ON"
   payload_off: "OFF"
@@ -64,8 +64,8 @@
 
 - platform: mqtt
   name: "Top"
-  state_topic: "stat/kitchentop/POWER"
-  command_topic: "cmnd/kitchentop/power"
+  state_topic: "stat/top/POWER"
+  command_topic: "cmnd/top/power"
   qos: 0
   payload_on: "ON"
   payload_off: "OFF"

@@ -1,0 +1,8 @@
+  DevTab:
+    name: Dev
+    view: yes
+    entities:
+      - switch.melpo
+      - script.test_pushbullet
+      - script.restart_ha
+      - input_boolean.switch_tv
