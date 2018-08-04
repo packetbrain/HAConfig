@@ -17,7 +17,7 @@ garage:
 
 cibelephone:
   hide_if_away: false
-  icon:
+  icon: mdi:account
   mac:
   name: cibelephone
   picture:
@@ -25,7 +25,7 @@ cibelephone:
 
 brandonphone:
   hide_if_away: false
-  icon:
+  icon: mdi:account
   mac:
   name: brandonphone
   picture:
@@ -57,7 +57,7 @@ nabi:
 
 kenphone:
   hide_if_away: false
-  icon:
+  icon: mdi:account
   mac:
   name: kenphone
   picture:
@@ -68,5 +68,181 @@ broadlink:
   icon:
   mac:
   name: broadlink
+  picture:
+  track: true
+
+ipad:
+  hide_if_away: false
+  icon:
+  mac:
+  name: ipad
+  picture:
+  track: true
+
+dns_in:
+  hide_if_away: false
+  icon:
+  mac:
+  name: dns in
+  picture:
+  track: true
+
+exchange:
+  hide_if_away: false
+  icon:
+  mac:
+  name: exchange
+  picture:
+  track: true
+
+postfix:
+  hide_if_away: false
+  icon:
+  mac:
+  name: postfix
+  picture:
+  track: true
+
+ftp:
+  hide_if_away: false
+  icon:
+  mac:
+  name: ftp
+  picture:
+  track: true
+
+ucm7:
+  hide_if_away: false
+  icon:
+  mac:
+  name: ucm7
+  picture:
+  track: true
+
+unity:
+  hide_if_away: false
+  icon:
+  mac:
+  name: unity
+  picture:
+  track: true
+
+www_pb:
+  hide_if_away: false
+  icon:
+  mac:
+  name: www pb
+  picture:
+  track: true
+
+wifi_ap:
+  hide_if_away: false
+  icon:
+  mac:
+  name: wifi ap
+  picture:
+  track: true
+
+c3560_air:
+  hide_if_away: false
+  icon:
+  mac:
+  name: c3560 air
+  picture:
+  track: true
+
+c3560:
+  hide_if_away: false
+  icon:
+  mac:
+  name: c3560
+  picture:
+  track: true
+
+c3550_air:
+  hide_if_away: false
+  icon:
+  mac:
+  name: c3550 air
+  picture:
+  track: true
+
+rackweb:
+  hide_if_away: false
+  icon:
+  mac:
+  name: rackweb
+  picture:
+  track: true
+
+apc1:
+  hide_if_away: false
+  icon:
+  mac:
+  name: apc1
+  picture:
+  track: true
+
+esx1:
+  hide_if_away: false
+  icon:
+  mac:
+  name: esx1
+  picture:
+  track: true
+
+drac_celito:
+  hide_if_away: false
+  icon:
+  mac:
+  name: drac celito
+  picture:
+  track: true
+
+esx_celito:
+  hide_if_away: false
+  icon:
+  mac:
+  name: esx celito
+  picture:
+  track: true
+
+fog:
+  hide_if_away: false
+  icon:
+  mac:
+  name: fog
+  picture:
+  track: true
+
+c2960:
+  hide_if_away: false
+  icon:
+  mac:
+  name: c2960
+  picture:
+  track: true
+
+drac5:
+  hide_if_away: false
+  icon:
+  mac:
+  name: drac5
+  picture:
+  track: true
+
+drac1:
+  hide_if_away: false
+  icon:
+  mac:
+  name: drac1
+  picture:
+  track: true
+
+cycladesrack1:
+  hide_if_away: false
+  icon:
+  mac:
+  name: cycladesrack1
   picture:
   track: true

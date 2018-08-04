@@ -1,11 +1,45 @@
 - platform: ping
   hosts:
-    laptop: 7.7.5.55
-    broadlink: 7.7.5.66
-    garage: 7.7.5.99
     kenphone: 7.7.5.200
     cibelephone: 7.7.5.201
     brandonphone: 7.7.5.202
+    garage: 7.7.5.99
+    broadlink: 7.7.5.66
+    laptop: 7.7.5.55
     nabi: 7.7.5.210
-    tv: 7.7.7.242
+    ipad: 7.7.5.211
     roku: 7.7.7.243
+    tv: 7.7.7.242
+    xbox: 7.7.7.250
+    dns_in: 10.5.2.8
+    exchange: 10.5.2.3
+    postfix: 10.5.2.4
+    ftp: 10.5.2.5
+    ucm7: 10.5.2.6
+    unity: 10.5.2.7
+    www_pb: 10.5.2.231
+    wifi_ap: 7.7.7.5
+    c2960: 7.7.7.177
+    c3560_air: 10.5.2.2
+    c3560: 7.7.7.1
+    c3550_air: 10.5.2.177
+    c3550_wire: 10.7.7.2
+    rackweb: 192.168.1.203
+    cycladesrack1: 10.9.9.3
+    apc1: 10.9.9.41
+    drac1: 10.9.9.200
+    esx1: 10.9.9.201
+#esx1 has rackweb,fog,crm(.206) on it
+    drac2: 10.9.9.203
+    esx2: 10.9.9.204
+    drac3: 10.9.9.207
+    esx3: 10.9.9.208
+    drac4: 10.9.9.209
+    esx4: 10.9.9.210
+    drac5: 10.9.9.212
+    drac_celito: 10.5.2.20
+    esx_celito: 10.5.2.21
+#celito has HA, exchange, ucm, ftp, www_pb on it
+    fog: 10.9.9.202
+
+

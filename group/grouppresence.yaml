@@ -4,6 +4,7 @@
     entities:
       - group.people_presence
       - group.device_presence
+      - group.server_presence
 
   People_Presence:
     control: hidden
@@ -21,6 +22,41 @@
       - device_tracker.broadlink
       - device_tracker.laptop
       - device_tracker.nabi
+      - device_tracker.ipad
       - device_tracker.roku
       - device_tracker.tv
+      - device_tracker.xbox
+
+  Server_Presence:
+    control: hidden
+    name: Servers
+    entities:
+      - device_tracker.dns_in
+      - device_tracker.exchange
+      - device_tracker.postfix
+      - device_tracker.ftp
+      - device_tracker.ucm7
+      - device_tracker.unity
+      - device_tracker.www_pb
+      - device_tracker.wifi_ap
+      - device_tracker.c2960
+      - device_tracker.c3560_air
+      - device_tracker.c3560
+      - device_tracker.c3550_air
+      - device_tracker.c3550_wire
+      - device_tracker.rackweb
+      - device_tracker.cycladesrack1
+      - device_tracker.apc1
+      - device_tracker.drac1
+      - device_tracker.esx1
+      - device_tracker.drac2
+      - device_tracker.esx2
+      - device_tracker.drac3
+      - device_tracker.esx3
+      - device_tracker.drac4
+      - device_tracker.esx4
+      - device_tracker.drac5
+      - device_tracker.drac_celito
+      - device_tracker.esx_celito
+      - device_tracker.fog
 
