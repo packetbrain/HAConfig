@@ -300,3 +300,88 @@ input_boolean:
     initial: off
     icon: mdi:car
 
+binary_sensor:
+  - platform: ping
+    host: 10.5.2.8
+    name: Internal DNS
+  - platform: ping
+    host: 10.5.2.3
+    name: Exchange
+  - platform: ping
+    host: 10.5.2.4
+    name: Postfix
+  - platform: ping
+    host: 10.5.2.5
+    name: FTP
+  - platform: ping
+    host: 10.5.2.6
+    name: UCM7
+  - platform: ping
+    host: 10.5.2.7
+    name: Unity
+  - platform: ping
+    host: 10.5.2.231
+    name: WWW_PB
+  - platform: ping
+    host: 7.7.7.5
+    name: WiFi_AP
+  - platform: ping
+    host: 7.7.7.177
+    name: C2960
+  - platform: ping
+    host: 10.5.2.2
+    name: C3560_Air
+  - platform: ping
+    host: 7.7.7.1
+    name: C3560
+  - platform: ping
+    host: 10.5.2.177
+    name: C3550_Air
+  - platform: ping
+    host: 10.7.7.2
+    name: C3550_Wire
+  - platform: ping
+    host: 192.168.1.203
+    name: Rackweb
+  - platform: ping
+    host: 10.9.9.3
+    name: CycladesRack1
+  - platform: ping
+    host: 10.9.9.41
+    name: APC1
+  - platform: ping
+    host: 10.9.9.200
+    name: DRAC1
+  - platform: ping
+    host: 10.9.9.201
+    name: ESX1
+  - platform: ping
+    host: 10.9.9.203
+    name: DRAC2
+  - platform: ping
+    host: 10.9.9.204
+    name: ESX2
+  - platform: ping
+    host: 10.9.9.207
+    name: DRAC3
+  - platform: ping
+    host: 10.9.9.208
+    name: ESX3
+  - platform: ping
+    host: 10.9.9.209
+    name: DRAC4
+  - platform: ping
+    host: 10.9.9.210
+    name: ESX4
+  - platform: ping
+    host: 10.9.9.212
+    name: DRAC5
+  - platform: ping
+    host: 10.5.2.20
+    name: DRAC_Celito
+  - platform: ping
+    host: 10.5.2.21
+    name: ESX_Celito
+  - platform: ping
+    host: 10.9.9.202
+    name: FOG
