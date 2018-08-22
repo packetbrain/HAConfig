@@ -58,6 +58,74 @@ xboxoff:
       entity_id: switch.xbox_discrete_power_off2
 #
 #
+# Turn down the bass on the Onkyo
+#
+#
+#
+
+bassdown:
+  alias: "Bass Down"
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_leveldown
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_leveldown
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_leveldown
+    - delay:
+        seconds: 5 
+
+#
+#
+# Turn up the bass on the Onkyo
+#
+#
+#
+
+bassup:
+  alias: "Bass Up"
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelchselect
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelup
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelup
+    - service: homeassistant.turn_on
+      entity_id: switch.onkyo_levelup
+    - delay:
+        seconds: 5 
+#
 # Turn the volume down 35 steps to 0 on Panasonic
 #    can shorten this with some "repeat count" in the IR code itself
 #

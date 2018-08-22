@@ -20,7 +20,7 @@
   qos: 0
   payload_on: "ON"
   payload_off: "OFF"
-  retain: true
+  retain: false
 
 - platform: mqtt
   name: "Tall"
@@ -29,7 +29,7 @@
   qos: 0
   payload_on: "ON"
   payload_off: "OFF"
-  retain: true
+  retain: false
 
 - platform: mqtt
   name: "Fireplace"
@@ -38,7 +38,7 @@
   qos: 0
   payload_on: "ON"
   payload_off: "OFF"
-  retain: true
+  retain: false
 
 #
 # Kitchen Lights
@@ -51,7 +51,7 @@
   qos: 0
   payload_on: "ON"
   payload_off: "OFF"
-  retain: true
+  retain: false
 
 - platform: mqtt
   name: "Island"
@@ -60,7 +60,7 @@
   qos: 0
   payload_on: "ON"
   payload_off: "OFF"
-  retain: true
+  retain: false
 
 - platform: mqtt
   name: "Top"
@@ -69,5 +69,18 @@
   qos: 0
   payload_on: "ON"
   payload_off: "OFF"
-  retain: true
+  retain: false
+
+#
+# Boys' Rooms Lights
+#
+
+- platform: mqtt
+  name: "Brandon"
+  state_topic: "stat/brandon/POWER"
+  command_topic: "cmnd/brandon/power"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: false
 

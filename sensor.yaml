@@ -13,14 +13,56 @@
   unit_of_measurement: days
   scan_interval: 10800
   command: "/config/ssl-cert-check -b -c /certs/cert.pem | awk '{ print $NF }'"
+
 #
 #
-# Tracking the Reed Switch until I feel comfortable with garage cover operation
+# Template to make garage 5 state solution display in a nice looking way
+#
+#
+- platform: template
+  sensors:
+    garage_door_state:
+      value_template: >-
+        {% if states.input_boolean.garage_stopped.state == 'on' %}
+          Stopped
+        {% elif states.input_boolean.garage_opening.state == 'on' %}
+          Opening
+        {% elif states.input_boolean.garage_closing.state == 'on' %}
+          Closing
+        {% elif states.sensor.reed_switch_closed.state == 'ON' %}
+          Closed
+        {% elif states.sensor.reed_switch_open.state == 'ON' %}
+          Open
+        {% else %}
+          Stopped
+        {% endif %}
+      icon_template: >-
+        {% if states.input_boolean.garage_stopped.state == 'on' %}
+          mdi:garage-alert
+        {% elif states.input_boolean.garage_opening.state == 'on' %}
+          mdi:garage-open
+        {% elif states.input_boolean.garage_closing.state == 'on' %}
+          mdi:garage-open
+        {% elif states.sensor.reed_switch_closed.state == 'ON' %}
+          mdi:garage
+        {% elif states.sensor.reed_switch_open.state == 'ON' %}
+          mdi:garage-open
+        {% else %}
+          mdi:garage-alert
+        {% endif %}
+#
+#
+# Tracking Reed Switches until I feel comfortable with garage cover operation
 #
 #
 - platform: mqtt
-  name: "Reed Switch"
+  name: "Reed Switch Closed"
   state_topic: "stat/garage/POWER2"
+  icon: mdi:nintendo-switch
+
+- platform: mqtt
+  name: "Reed Switch Open"
+  state_topic: "stat/garage/POWER3"
   icon: mdi:nintendo-switch
 #
 #
@@ -35,6 +77,16 @@
   type: count
   start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
   end: '{{ now() }}'
+#
+#
+# DS18B20+ Temperature Sensor attached to Garage ESP-12 / NodeMcu
+#
+#
+- platform: mqtt
+  name: "Garage Temp"
+  state_topic: "tele/garage/SENSOR"
+  unit_of_measurement: "°F"
+  value_template: '{{ value_json["DS18B20"]["Temperature"] }}'
 #
 #
 # Speedtest sensors for a custom card for network monitoring in the frontend

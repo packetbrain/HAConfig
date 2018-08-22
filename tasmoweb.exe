@@ -1,2 +1,5 @@
-docker run -v /home/cisco/config/data:/data -p 8000:80 -e APACHE_SERVER_NAME=tasmoadmin.mydomain --name tasmoadmin raymondmm/tasmoadmin || docker start tasmoadmin
+
+docker stop tasmoadmin
+docker rm tasmoadmin
+docker run -v /home/cisco/config/data:/data -p 8000:80 -e APACHE_SERVER_NAME=tasmoadmin.mydomain --name tasmoadmin raymondmm/tasmoadmin || docker start tasmoadmin &
 

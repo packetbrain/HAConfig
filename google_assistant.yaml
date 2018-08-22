@@ -46,6 +46,8 @@
       expose: true
     group.kitchen:
       expose: true
+    group.upstairs:
+      expose: true
     switch.tv_on:
       expose: true
     switch.tv_off:
@@ -60,6 +62,12 @@
       expose: true
     switch.onkyo_video2:
       expose: true
+    switch.onkyo_levelchselect:
+      expose: true
+    switch.onkyo_levelup:
+      expose: true
+    switch.onkyo_leveldown:
+      expose: true
     switch.onkyo_mute:
       expose: true
     switch.tv_netflix:
@@ -73,5 +81,3 @@
 #      alias: myreed
 #    switch.reed_switch:
 #      expose: true
-      
-

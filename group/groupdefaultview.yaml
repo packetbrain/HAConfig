@@ -1,18 +1,19 @@
   default_view:
     view: yes
-#    order: 1
     icon: mdi:home
     name: Lights
     entities:
       - group.family_room
       - group.garage
       - group.kitchen
+      - group.upstairs
       - group.internet_speed
-      - group.weathersnapshot
+#      - group.weathersnapshot
       - sensor.sunrise_time
       - sensor.sunset_time
       - sensor.ssl_cert_expiry
       - sensor.garage_today
+      - sensor.garage_temp
       - sensor.speedtest_download
       - sensor.speedtest_upload
       - sensor.speedtest_ping
@@ -33,13 +34,23 @@
       - light.Island
       - light.Top
 
+
+  Upstairs:
+    name: Upstairs
+    entities:
+      - light.Brandon
+
+
+
   Garage:
     name: Garage
     control: hidden
     icon: mdi:garage
     entities:
       - cover.garage
-      - sensor.reed_switch
+      - sensor.reed_switch_closed
+      - sensor.reed_switch_open
+      - sensor.garage_door_state
       - alert.garage
       - input_number.temp
 #      - switch.garage_door

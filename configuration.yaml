@@ -99,6 +99,7 @@ logger:
     homeassistant.components.recorder.util: info
     homeassistant.components.history: info
     homeassistant.components.websocket_api: info
+    homeassistant.components.device_tracker.ping: info
     roku: info
     panasonic_viera: info
 # see docs https://www.home-assistant.io/components/logger/
@@ -108,7 +109,7 @@ logger:
 
 recorder:
 #number of history days to keep in recorder database after a purge.
-  purge_keep_days: 10
+  purge_keep_days: 7
 # How often (in days) the purge task runs
   purge_interval: 1
   include:
@@ -147,6 +148,7 @@ history:
      - light.Fireplace
      - light.Foyer
      - light.Tall
+     - light.Brandon
      - sun.sun
      - sensor.speedtest_download
      - sensor.speedtest_upload
@@ -190,6 +192,12 @@ panel_iframe:
 #    url_path: weather
 #    js_url: 'https://darksky.net/widget/default/42.360082,-71.05888/us12/en.js'
 #    embed_iframe: true
+#panel_custom:
+#  - name: hello
+#    sidebar_title: Hello World
+#    config:
+#      who: Paulus
+#    url_path: hello
 
 
 
@@ -299,6 +307,14 @@ input_boolean:
     name: for testing lovelaceUI
     initial: off
     icon: mdi:car
+  garage_opening:
+    initial: OFF
+  garage_closing:
+    initial: OFF
+  garage_stopped:
+    initial: OFF
+
+
 
 binary_sensor:
   - platform: ping
@@ -328,60 +344,60 @@ binary_sensor:
   - platform: ping
     host: 7.7.7.177
     name: C2960
-  - platform: ping
-    host: 10.5.2.2
-    name: C3560_Air
-  - platform: ping
-    host: 7.7.7.1
-    name: C3560
-  - platform: ping
-    host: 10.5.2.177
-    name: C3550_Air
-  - platform: ping
-    host: 10.7.7.2
-    name: C3550_Wire
-  - platform: ping
-    host: 192.168.1.203
-    name: Rackweb
-  - platform: ping
-    host: 10.9.9.3
-    name: CycladesRack1
-  - platform: ping
-    host: 10.9.9.41
-    name: APC1
-  - platform: ping
-    host: 10.9.9.200
-    name: DRAC1
-  - platform: ping
-    host: 10.9.9.201
-    name: ESX1
-  - platform: ping
-    host: 10.9.9.203
-    name: DRAC2
-  - platform: ping
-    host: 10.9.9.204
-    name: ESX2
-  - platform: ping
-    host: 10.9.9.207
-    name: DRAC3
-  - platform: ping
-    host: 10.9.9.208
-    name: ESX3
-  - platform: ping
-    host: 10.9.9.209
-    name: DRAC4
-  - platform: ping
-    host: 10.9.9.210
-    name: ESX4
-  - platform: ping
-    host: 10.9.9.212
-    name: DRAC5
+#  - platform: ping
+#    host: 10.5.2.2
+#    name: C3560_Air
+#  - platform: ping
+#    host: 7.7.7.1
+#    name: C3560
+#  - platform: ping
+#    host: 10.5.2.177
+#    name: C3550_Air
+#  - platform: ping
+#    host: 10.7.7.2
+#    name: C3550_Wire
+#  - platform: ping
+#    host: 192.168.1.203
+#    name: Rackweb
+#  - platform: ping
+#    host: 10.9.9.3
+#    name: CycladesRack1
+#  - platform: ping
+#    host: 10.9.9.41
+#    name: APC1
+#  - platform: ping
+#    host: 10.9.9.200
+#    name: DRAC1
+#  - platform: ping
+#    host: 10.9.9.201
+#    name: ESX1
+#  - platform: ping
+#    host: 10.9.9.203
+#    name: DRAC2
+#  - platform: ping
+#    host: 10.9.9.204
+#    name: ESX2
+#  - platform: ping
+#    host: 10.9.9.207
+#    name: DRAC3
+#  - platform: ping
+#    host: 10.9.9.208
+#    name: ESX3
+#  - platform: ping
+#    host: 10.9.9.209
+#    name: DRAC4
+#  - platform: ping
+#    host: 10.9.9.210
+#    name: ESX4
+#  - platform: ping
+#    host: 10.9.9.212
+#    name: DRAC5
   - platform: ping
     host: 10.5.2.20
     name: DRAC_Celito
   - platform: ping
     host: 10.5.2.21
     name: ESX_Celito
-  - platform: ping
-    host: 10.9.9.202
-    name: FOG
+#  - platform: ping
+#    host: 10.9.9.202
+#    name: FOG

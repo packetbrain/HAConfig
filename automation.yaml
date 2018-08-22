@@ -10,6 +10,10 @@
 # add more lines like these if you have any devices with 3 or more relays
 #
 #
+# Note: Theo Arends may have a different similar solution?
+# https://github.com/arendst/Sonoff-Tasmota/wiki/What's-New
+#   suggests using "cmnd/your_light/state" instead
+#
 - alias: "Power state on HA start-up"
   trigger:
     platform: homeassistant
@@ -19,10 +23,89 @@
       data:
         topic: "cmnd/sonoffs/power1"
         payload: ""
+        retain: false
     - service: mqtt.publish
       data:
         topic: "cmnd/sonoffs/power2"
         payload: ""
+        retain: false
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/sonoffs/power3"
+        payload: ""
+        retain: false
+#
+#
+# Automation to detect 5 garage door states
+#
+#
+- alias: garage_door_opening
+  trigger:
+    platform: state
+    entity_id: sensor.reed_switch_closed
+    to: 'OFF'
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.garage_opening
+
+- alias: garage_door_open_complete
+  trigger:
+    platform: state
+    entity_id: sensor.reed_switch_open
+    to: 'ON'
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_stopped
+
+- alias: garage_door_closing
+  trigger:
+    platform: state
+    entity_id: sensor.reed_switch_open
+    to: 'OFF'
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.garage_closing
+
+- alias: garage_door_close_complete
+  trigger:
+    platform: state
+    entity_id: sensor.reed_switch_closed
+    to: 'ON'
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_stopped
+
+- alias: garage_door_stopped_while_opening
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening
+    to: 'on'
+    for:
+      seconds: 15
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.garage_stopped
+
+- alias: garage_door_stopped_while_closing
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing
+    to: 'on'
+    for:
+      seconds: 15 
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.garage_stopped
+
+
 #
 #
 # Sends a message to all Alexas if the garage has been open 2hrs
@@ -124,4 +207,18 @@
 #  action:
 #    service: homeassistant.turn_off
 #    entity_id: switch.Foyer
+
+- alias: "brandon workaround"
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: light.brandon
+      to: 'on'
+  condition:
+    condition: time
+    after: '23:00:00'
+    before: '06:00:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.brandon
 

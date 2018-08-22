@@ -3,6 +3,7 @@ smart_home:
     include_entities:
       - group.family_room
       - group.kitchen
+      - group.upstairs
       - switch.tv_on
       - switch.tv_off
       - switch.tv_ok
