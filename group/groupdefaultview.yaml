@@ -48,9 +48,9 @@
     icon: mdi:garage
     entities:
       - cover.garage
+      - sensor.garage_state
       - sensor.reed_switch_closed
       - sensor.reed_switch_open
-      - sensor.garage_door_state
       - alert.garage
       - input_number.temp
 #      - switch.garage_door

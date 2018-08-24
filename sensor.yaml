@@ -13,7 +13,6 @@
   unit_of_measurement: days
   scan_interval: 10800
   command: "/config/ssl-cert-check -b -c /certs/cert.pem | awk '{ print $NF }'"
-
 #
 #
 # Template to make garage 5 state solution display in a nice looking way
@@ -21,14 +20,59 @@
 #
 - platform: template
   sensors:
-    garage_door_state:
+    garage_state:
+      friendly_name: "Garage State"
       value_template: >-
         {% if states.input_boolean.garage_stopped.state == 'on' %}
           Stopped
-        {% elif states.input_boolean.garage_opening.state == 'on' %}
-          Opening
-        {% elif states.input_boolean.garage_closing.state == 'on' %}
-          Closing
+        {% elif states.input_boolean.garage_opening_twelve.state == 'on' %}
+          Opening (12)
+        {% elif states.input_boolean.garage_opening_eleven.state == 'on' %}
+          Opening (11)
+        {% elif states.input_boolean.garage_opening_ten.state == 'on' %}
+          Opening (10)
+        {% elif states.input_boolean.garage_opening_nine.state == 'on' %}
+          Opening (9)
+        {% elif states.input_boolean.garage_opening_eight.state == 'on' %}
+          Opening (8)
+        {% elif states.input_boolean.garage_opening_seven.state == 'on' %}
+          Opening (7)
+        {% elif states.input_boolean.garage_opening_six.state == 'on' %}
+          Opening (6)
+        {% elif states.input_boolean.garage_opening_five.state == 'on' %}
+          Opening (5)
+        {% elif states.input_boolean.garage_opening_four.state == 'on' %}
+          Opening (4)
+        {% elif states.input_boolean.garage_opening_three.state == 'on' %}
+          Opening (3)
+        {% elif states.input_boolean.garage_opening_two.state == 'on' %}
+          Opening (2)
+        {% elif states.input_boolean.garage_opening_one.state == 'on' %}
+          Opening (1)
+        {% elif states.input_boolean.garage_closing_twelve.state == 'on' %}
+          Closing (12)
+        {% elif states.input_boolean.garage_closing_eleven.state == 'on' %}
+          Closing (11)
+        {% elif states.input_boolean.garage_closing_ten.state == 'on' %}
+          Closing (10)
+        {% elif states.input_boolean.garage_closing_nine.state == 'on' %}
+          Closing (9)
+        {% elif states.input_boolean.garage_closing_eight.state == 'on' %}
+          Closing (8)
+        {% elif states.input_boolean.garage_closing_seven.state == 'on' %}
+          Closing (7)
+        {% elif states.input_boolean.garage_closing_six.state == 'on' %}
+          Closing (6)
+        {% elif states.input_boolean.garage_closing_five.state == 'on' %}
+          Closing (5)
+        {% elif states.input_boolean.garage_closing_four.state == 'on' %}
+          Closing (4)
+        {% elif states.input_boolean.garage_closing_three.state == 'on' %}
+          Closing (3)
+        {% elif states.input_boolean.garage_closing_two.state == 'on' %}
+          Closing (2)
+        {% elif states.input_boolean.garage_closing_one.state == 'on' %}
+          Closing (1)
         {% elif states.sensor.reed_switch_closed.state == 'ON' %}
           Closed
         {% elif states.sensor.reed_switch_open.state == 'ON' %}

@@ -40,13 +40,165 @@
 #
 #
 - alias: garage_door_opening
+  initial_state: 'off'
   trigger:
     platform: state
     entity_id: sensor.reed_switch_closed
     to: 'OFF'
   action:
-    service: input_boolean.turn_on
-    entity_id: input_boolean.garage_opening
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_twelve
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening
+
+- alias: garage_door_opening_eleven
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_twelve
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_eleven
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_twelve
+
+- alias: garage_door_opening_ten
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_eleven
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_ten
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_eleven
+
+- alias: garage_door_opening_nine
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_ten
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_nine
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_ten
+
+- alias: garage_door_opening_eight
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_nine
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_eight
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_nine
+
+- alias: garage_door_opening_seven
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_eight
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_seven
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_eight
+
+- alias: garage_door_opening_six
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_seven
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_six
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_seven
+
+- alias: garage_door_opening_five
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_six
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_five
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_six
+
+- alias: garage_door_opening_four
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_five
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_four
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_five
+
+- alias: garage_door_opening_three
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_four
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_three
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_four
+
+- alias: garage_door_opening_two
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_three
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_two
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_three
+
+- alias: garage_door_opening_one
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_opening_two
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_opening_one
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_two
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_opening_one
+
+
 
 - alias: garage_door_open_complete
   trigger:
@@ -60,15 +212,173 @@
       entity_id: input_boolean.garage_closing
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_stopped
+    - service: homeassistant.turn_on
+      entity_id: automation.garage_door_closing
+
+
+
 
 - alias: garage_door_closing
+  initial_state: 'off'
   trigger:
     platform: state
     entity_id: sensor.reed_switch_open
     to: 'OFF'
   action:
-    service: input_boolean.turn_on
-    entity_id: input_boolean.garage_closing
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_twelve
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing
+
+- alias: garage_door_closing_eleven
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_twelve
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_eleven
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_twelve
+
+- alias: garage_door_closing_ten
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_eleven
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_ten
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_eleven
+
+- alias: garage_door_closing_nine
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_ten
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_nine
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_ten
+
+- alias: garage_door_closing_eight
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_nine
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_eight
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_nine
+
+- alias: garage_door_closing_seven
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_eight
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_seven
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_eight
+
+- alias: garage_door_closing_six
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_seven
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_six
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_seven
+
+- alias: garage_door_closing_five
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_six
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_five
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_six
+
+- alias: garage_door_closing_four
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_five
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_four
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_five
+
+- alias: garage_door_closing_three
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_four
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_three
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_four
+
+- alias: garage_door_closing_two
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_three
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_two
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_three
+
+- alias: garage_door_closing_one
+  trigger:
+    platform: state
+    entity_id: input_boolean.garage_closing_two
+    to: 'on'
+  action:
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_closing_one
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_two
+    - delay:
+        milliseconds: 410
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_closing_one
+
+
+
 
 - alias: garage_door_close_complete
   trigger:
@@ -82,6 +392,10 @@
       entity_id: input_boolean.garage_opening
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_stopped
+    - service: homeassistant.turn_on
+      entity_id: automation.garage_door_opening
+
+
 
 - alias: garage_door_stopped_while_opening
   trigger:

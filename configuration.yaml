@@ -235,8 +235,6 @@ input_number:
 cover:
   - platform: mqtt
     name: "Garage"
-# the "2" below is set by the "switchtopic" command - can be any number/word
-#    state_topic: "cmnd/2/POWER2"
     state_topic: "stat/garage/POWER2"
     command_topic: "cmnd/garage/power1"
     availability_topic: "tele/garage/LWT"
@@ -244,9 +242,10 @@ cover:
     payload_open: "ON"
     payload_close: "ON"
     payload_stop: "ON"
+#State follows the "Reed Closed" reed switch = "ON" when garage door is closed
 #you can actually customize the state payloads from Tasmota with "StateTextx"
-    state_open: "ON"
-    state_closed: "OFF"
+    state_open: "OFF"
+    state_closed: "ON"
     payload_available: "Online"
     payload_not_available: "Offline"
     optimistic: false
@@ -307,49 +306,109 @@ input_boolean:
     name: for testing lovelaceUI
     initial: off
     icon: mdi:car
+  garage_stopped:
+    initial: OFF
   garage_opening:
+    initial: OFF
+  garage_opening_twelve:
+    initial: OFF
+  garage_opening_eleven:
+    initial: OFF
+  garage_opening_ten:
+    initial: OFF
+  garage_opening_nine:
+    initial: OFF
+  garage_opening_eight:
+    initial: OFF
+  garage_opening_seven:
+    initial: OFF
+  garage_opening_six:
+    initial: OFF
+  garage_opening_five:
+    initial: OFF
+  garage_opening_four:
+    initial: OFF
+  garage_opening_three:
+    initial: OFF
+  garage_opening_two:
+    initial: OFF
+  garage_opening_one:
     initial: OFF
   garage_closing:
     initial: OFF
-  garage_stopped:
+  garage_closing_twelve:
+    initial: OFF
+  garage_closing_eleven:
+    initial: OFF
+  garage_closing_ten:
+    initial: OFF
+  garage_closing_nine:
+    initial: OFF
+  garage_closing_eight:
+    initial: OFF
+  garage_closing_seven:
+    initial: OFF
+  garage_closing_six:
+    initial: OFF
+  garage_closing_five:
+    initial: OFF
+  garage_closing_four:
+    initial: OFF
+  garage_closing_three:
+    initial: OFF
+  garage_closing_two:
+    initial: OFF
+  garage_closing_one:
     initial: OFF
 
 
+#binary_sensor:
+#  - platform: template
+#    sensors:
+#      garage_opening:
+#        friendly_name: Garage Opening
+#        value_template: '{{(as_timestamp(now()) - as_timestamp(states.automation.garage_door_opening.last_updated) < 1800)}}'
+#        entity_id: sensor.time
 
-binary_sensor:
-  - platform: ping
-    host: 10.5.2.8
-    name: Internal DNS
-  - platform: ping
-    host: 10.5.2.3
-    name: Exchange
-  - platform: ping
-    host: 10.5.2.4
-    name: Postfix
-  - platform: ping
-    host: 10.5.2.5
-    name: FTP
-  - platform: ping
-    host: 10.5.2.6
-    name: UCM7
-  - platform: ping
-    host: 10.5.2.7
-    name: Unity
-  - platform: ping
-    host: 10.5.2.231
-    name: WWW_PB
-  - platform: ping
-    host: 7.7.7.5
-    name: WiFi_AP
-  - platform: ping
-    host: 7.7.7.177
-    name: C2960
+#  - platform: ping
+#    host: 10.5.2.8
+#    name: Internal DNS
+#  - platform: ping
+#    host: 10.5.2.3
+#    name: Exchange
+#  - platform: ping
+#    host: 10.5.2.4
+#    name: Postfix
+#  - platform: ping
+#    host: 10.5.2.5
+#    name: FTP
+#  - platform: ping
+#    host: 10.5.2.6
+#    name: UCM7
+#  - platform: ping
+#    host: 10.5.2.7
+#    name: Unity
+#  - platform: ping
+#    host: 10.5.2.231
+#    name: WWW_PB
+#  - platform: ping
+#    host: 7.7.7.5
+#    name: WiFi_AP
+#  - platform: ping
+#    host: 7.7.7.177
+#    name: C2960
 #  - platform: ping
 #    host: 10.5.2.2
 #    name: C3560_Air
 #  - platform: ping
 #    host: 7.7.7.1
 #    name: C3560
+#  - platform: ping
+#    host: 10.5.2.20
+#    name: DRAC_Celito
+#  - platform: ping
+#    host: 10.5.2.21
+#    name: ESX_Celito
 #  - platform: ping
 #    host: 10.5.2.177
 #    name: C3550_Air
@@ -392,12 +451,6 @@ binary_sensor:
 #  - platform: ping
 #    host: 10.9.9.212
 #    name: DRAC5
-  - platform: ping
-    host: 10.5.2.20
-    name: DRAC_Celito
-  - platform: ping
-    host: 10.5.2.21
-    name: ESX_Celito
 #  - platform: ping
 #    host: 10.9.9.202
 #    name: FOG
