@@ -34,6 +34,13 @@
         topic: "cmnd/sonoffs/power3"
         payload: ""
         retain: false
+#this one didnt really help as sensor looks for "status" not "status 11"
+#keeping in case it leads to a solution on initial boot
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/sonoffs/status"
+        payload: "11"
+        retain: false
 #
 #
 # Automation to detect 5 garage door states
@@ -51,73 +58,73 @@
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_eleven
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_twelve
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_ten
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_eleven
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_nine
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_ten
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_eight
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_nine
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_seven
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_eight
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_six
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_seven
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_five
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_six
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_four
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_five
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_three
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_four
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_two
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_three
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_opening_one
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_two
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_opening_one
 
@@ -153,73 +160,73 @@
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_eleven
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_twelve
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_ten
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_eleven
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_nine
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_ten
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_eight
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_nine
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_seven
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_eight
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_six
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_seven
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_five
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_six
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_four
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_five
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_three
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_four
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_two
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_three
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_closing_one
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_two
     - delay:
-        milliseconds: 410
+        milliseconds: 360
     - service: input_boolean.turn_off
       entity_id: input_boolean.garage_closing_one
 

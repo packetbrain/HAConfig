@@ -127,6 +127,16 @@ recorder:
      - sensor.speedtest_download
      - sensor.speedtest_upload
      - sensor.speedtest_ping
+     - sensor.garage
+     - sensor.foyer
+     - sensor.fireplace
+     - sensor.table
+     - sensor.tall
+     - sensor.island
+     - sensor.top
+     - sensor.brandon
+     - sensor.garage_temp
+
 # This should keep db size down a bit... 
 # used different domain/entity list for history and recorder components
 #   so that I could control display order for "history"
@@ -153,8 +163,69 @@ history:
      - sensor.speedtest_download
      - sensor.speedtest_upload
      - sensor.speedtest_ping
+     - sensor.garage
+     - sensor.foyer
+     - sensor.fireplace
+     - sensor.table
+     - sensor.tall
+     - sensor.island
+     - sensor.top
+     - sensor.brandon
+     - sensor.garage_temp
+
+
 # Note entities configured here are shown *before* a) their specific domains b) all domains
 # not counting sensors which are graphed below
+
+
+history_graph:
+  rssi_garage:
+    entities:
+      - sensor.garage
+    hours_to_show: 240
+    refresh: 60
+  rssi_foyer:
+    entities:
+      - sensor.foyer
+    hours_to_show: 240
+    refresh: 60
+  rssi_fireplace:
+    entities:
+      - sensor.fireplace
+    hours_to_show: 240
+    refresh: 60
+  rssi_table:
+    entities:
+      - sensor.table
+    hours_to_show: 240
+    refresh: 60
+  rssi_tall:
+    entities:
+      - sensor.tall
+    hours_to_show: 240
+    refresh: 60
+  rssi_island:
+    entities:
+      - sensor.island
+    hours_to_show: 240
+    refresh: 60
+  rssi_top:
+    entities:
+      - sensor.top
+    hours_to_show: 240
+    refresh: 60
+  rssi_brandon:
+    entities:
+      - sensor.brandon
+    hours_to_show: 240
+    refresh: 60
+  temp_garage:
+    entities:
+      - sensor.garage_temp
+    hours_to_show: 240
+    refresh: 60
+
+
 
 logbook:
   include:

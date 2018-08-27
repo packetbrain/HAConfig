@@ -1,0 +1,58 @@
+  RSSITab:
+    name: RSSI
+    view: yes
+    entities:
+      - group.rssi_familyroom
+      - group.rssi_kitchen
+      - group.temps
+      - group.uptime
+      - sensor.garage
+      - sensor.foyer
+      - sensor.fireplace
+      - sensor.table
+      - sensor.tall
+      - sensor.island
+      - sensor.top
+      - sensor.brandon
+
+  RSSI_FamilyRoom:
+    control: hidden
+    name: Sonoff Graphs
+    icon: mdi:chart-line-variant
+    entities:
+      - history_graph.rssi_garage
+      - history_graph.rssi_foyer
+      - history_graph.rssi_fireplace
+      - history_graph.rssi_tall
+
+  RSSI_Kitchen:
+    control: hidden
+    name: Sonoff Graphs
+    icon: mdi:chart-line-variant
+    entities:
+      - history_graph.rssi_brandon
+      - history_graph.rssi_table
+      - history_graph.rssi_island
+      - history_graph.rssi_top
+
+  Temps:
+    control: hidden
+    name: Temperatures
+    icon: mdi:chart-line-variant
+    entities:
+      - history_graph.temp_garage
+
+
+  Uptime:
+    control: hidden
+    name: Uptime
+    entities:
+      - sensor.garage_uptime
+      - sensor.foyer_uptime
+      - sensor.fireplace_uptime
+      - sensor.table_uptime
+      - sensor.tall_uptime
+      - sensor.island_uptime
+      - sensor.top_uptime
+      - sensor.brandon_uptime
+

@@ -123,6 +123,110 @@
   end: '{{ now() }}'
 #
 #
+# RSSI Monitoring Sensor for Sonoffs
+#
+#
+- platform: mqtt
+  name: "Garage"
+  state_topic: "tele/garage/STATE"
+  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Wifi"]["RSSI"] }}'
+
+- platform: mqtt
+  name: "Foyer"
+  state_topic: "tele/foyer/STATE"
+  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Wifi"]["RSSI"] }}'
+
+- platform: mqtt
+  name: "Fireplace"
+  state_topic: "tele/fireplace/STATE"
+  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Wifi"]["RSSI"] }}'
+
+- platform: mqtt
+  name: "Table"
+  state_topic: "tele/table/STATE"
+  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Wifi"]["RSSI"] }}'
+
+- platform: mqtt
+  name: "Tall"
+  state_topic: "tele/tall/STATE"
+  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Wifi"]["RSSI"] }}'
+
+- platform: mqtt
+  name: "Island"
+  state_topic: "tele/island/STATE"
+  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Wifi"]["RSSI"] }}'
+
+- platform: mqtt
+  name: "Top"
+  state_topic: "tele/top/STATE"
+  unit_of_measurement: "RSSI"
+  value_template: '{{ float(value_json["Wifi"]["RSSI"]) }}'
+
+- platform: mqtt
+  name: "Brandon"
+  state_topic: "tele/brandon/STATE"
+  unit_of_measurement: RSSI
+  value_template: '{{ value_json["Wifi"]["RSSI"] }}'
+#
+#
+# Uptime Monitoring Sensor for Sonoffs
+#
+#
+- platform: mqtt
+  name: "Garage Uptime"
+  state_topic: "tele/garage/STATE"
+#  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Uptime"] | regex_replace("T"," Days ") | regex_replace("(..):(..):(..)", "\\1 Hours") }}'
+
+- platform: mqtt
+  name: "Foyer Uptime"
+  state_topic: "tele/foyer/STATE"
+#  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Uptime"] | regex_replace("T"," Days ") | regex_replace("(..):(..):(..)", "\\1 Hours") }}'
+
+- platform: mqtt
+  name: "Fireplace Uptime"
+  state_topic: "tele/fireplace/STATE"
+#  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Uptime"] | regex_replace("T"," Days ") | regex_replace("(..):(..):(..)", "\\1 Hours") }}'
+
+- platform: mqtt
+  name: "Table Uptime"
+  state_topic: "tele/table/STATE"
+#  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Uptime"] | regex_replace("T"," Days ") | regex_replace("(..):(..):(..)", "\\1 Hours") }}'
+
+- platform: mqtt
+  name: "Tall Uptime"
+  state_topic: "tele/tall/STATE"
+#  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Uptime"] | regex_replace("T"," Days ") | regex_replace("(..):(..):(..)", "\\1 Hours") }}'
+
+- platform: mqtt
+  name: "Island Uptime"
+  state_topic: "tele/island/STATE"
+#  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Uptime"] | regex_replace("T"," Days ") | regex_replace("(..):(..):(..)", "\\1 Hours") }}'
+
+- platform: mqtt
+  name: "Top Uptime"
+  state_topic: "tele/top/STATE"
+#  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Uptime"] | regex_replace("T"," Days ") | regex_replace("(..):(..):(..)", "\\1 Hours") }}'
+
+- platform: mqtt
+  name: "Brandon Uptime"
+  state_topic: "tele/brandon/STATE"
+#  unit_of_measurement: "RSSI"
+  value_template: '{{ value_json["Uptime"] | regex_replace("T"," Days ") | regex_replace("(..):(..):(..)", "\\1 Hours") }}'
+#
+#
 # DS18B20+ Temperature Sensor attached to Garage ESP-12 / NodeMcu
 #
 #

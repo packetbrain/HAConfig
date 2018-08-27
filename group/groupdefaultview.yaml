@@ -51,10 +51,8 @@
       - sensor.garage_state
       - sensor.reed_switch_closed
       - sensor.reed_switch_open
-      - alert.garage
-      - input_number.temp
 #      - switch.garage_door
-# was for a templtae switch concept
+# was for a template switch concept
 
   Internet_Speed:
     name: Internet Speed

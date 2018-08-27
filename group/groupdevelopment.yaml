@@ -6,3 +6,5 @@
       - script.test_pushbullet
       - script.restart_ha
       - input_boolean.switch_tv
+      - alert.garage
+      - input_number.temp
