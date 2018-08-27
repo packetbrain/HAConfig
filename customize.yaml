@@ -37,6 +37,13 @@
   group.all_scripts:
     hidden: true
 #
+# change unit of measurement for RSSI throttled so that they
+# appear as line graphs and not charts
+#
+#  sensor.garage_rssi_smoothed:
+#    unit_of_measurement: "RSSI1"
+
+#
 #
 # Use garage device class so that icons in front end change
 # ("window" looks different than "garage" - but both are covers)

@@ -127,52 +127,165 @@
 #
 #
 - platform: mqtt
-  name: "Garage"
+  name: "Garage RSSI"
   state_topic: "tele/garage/STATE"
   unit_of_measurement: "RSSI"
   value_template: '{{ value_json["Wifi"]["RSSI"] }}'
 
 - platform: mqtt
-  name: "Foyer"
+  name: "Foyer RSSI"
   state_topic: "tele/foyer/STATE"
   unit_of_measurement: "RSSI"
   value_template: '{{ value_json["Wifi"]["RSSI"] }}'
 
 - platform: mqtt
-  name: "Fireplace"
+  name: "Fireplace RSSI"
   state_topic: "tele/fireplace/STATE"
   unit_of_measurement: "RSSI"
   value_template: '{{ value_json["Wifi"]["RSSI"] }}'
 
 - platform: mqtt
-  name: "Table"
+  name: "Table RSSI"
   state_topic: "tele/table/STATE"
   unit_of_measurement: "RSSI"
   value_template: '{{ value_json["Wifi"]["RSSI"] }}'
 
 - platform: mqtt
-  name: "Tall"
+  name: "Tall RSSI"
   state_topic: "tele/tall/STATE"
   unit_of_measurement: "RSSI"
   value_template: '{{ value_json["Wifi"]["RSSI"] }}'
 
 - platform: mqtt
-  name: "Island"
+  name: "Island RSSI"
   state_topic: "tele/island/STATE"
   unit_of_measurement: "RSSI"
   value_template: '{{ value_json["Wifi"]["RSSI"] }}'
 
 - platform: mqtt
-  name: "Top"
+  name: "Top RSSI"
   state_topic: "tele/top/STATE"
   unit_of_measurement: "RSSI"
-  value_template: '{{ float(value_json["Wifi"]["RSSI"]) }}'
+  value_template: '{{ value_json["Wifi"]["RSSI"] }}'
 
 - platform: mqtt
-  name: "Brandon"
+  name: "Brandon RSSI"
   state_topic: "tele/brandon/STATE"
-  unit_of_measurement: RSSI
+  unit_of_measurement: "RSSI"
   value_template: '{{ value_json["Wifi"]["RSSI"] }}'
+#
+#
+# Filter Sensor for Chart Graphs of RSSI with smoothing SMA
+#
+#
+- platform: filter
+  name: "Garage RSSI Smoothed"
+  entity_id: sensor.garage_rssi
+  filters:
+    - filter: time_simple_moving_average
+      window_size: 02:00
+- platform: filter
+  name: "Foyer RSSI Smoothed"
+  entity_id: sensor.foyer_rssi
+  filters:
+    - filter: time_simple_moving_average
+      window_size: 02:00
+- platform: filter
+  name: "Fireplace RSSI Smoothed"
+  entity_id: sensor.fireplace_rssi
+  filters:
+    - filter: time_simple_moving_average
+      window_size: 02:00
+- platform: filter
+  name: "Table RSSI Smoothed"
+  entity_id: sensor.table_rssi
+  filters:
+    - filter: time_simple_moving_average
+      window_size: 02:00
+- platform: filter
+  name: "Tall RSSI Smoothed"
+  entity_id: sensor.tall_rssi
+  filters:
+    - filter: time_simple_moving_average
+      window_size: 02:00
+- platform: filter
+  name: "Island RSSI Smoothed"
+  entity_id: sensor.island_rssi
+  filters:
+    - filter: time_simple_moving_average
+      window_size: 02:00
+- platform: filter
+  name: "Top RSSI Smoothed"
+  entity_id: sensor.top_rssi
+  filters:
+    - filter: time_simple_moving_average
+      window_size: 02:00
+- platform: filter
+  name: "Brandon RSSI Smoothed"
+  entity_id: sensor.brandon_rssi
+  filters:
+    - filter: time_simple_moving_average
+      window_size: 02:00
+#
+#
+# Filter Sensors for Bar Graphs of RSSI with only 1/6 sampling 
+#
+#
+- platform: filter
+  name: "Garage RSSI t"
+  entity_id: sensor.garage_rssi
+#  unit_of_measurement: "" - have to do this in customize.yaml
+  filters:
+    - filter: throttle
+      window_size: 6
+- platform: filter
+  name: "Foyer RSSI t"
+  entity_id: sensor.foyer_rssi
+  filters:
+    - filter: throttle
+      window_size: 6
+- platform: filter
+  name: "Fireplace RSSI t"
+  entity_id: sensor.fireplace_rssi
+  filters:
+    - filter: throttle
+      window_size: 6
+- platform: filter
+  name: "Table RSSI t"
+  entity_id: sensor.table_rssi
+  filters:
+    - filter: throttle
+      window_size: 6
+- platform: filter
+  name: "Tall RSSI t"
+  entity_id: sensor.tall_rssi
+  filters:
+    - filter: throttle
+      window_size: 6
+- platform: filter
+  name: "Island RSSI t"
+  entity_id: sensor.island_rssi
+  filters:
+    - filter: throttle
+      window_size: 6
+- platform: filter
+  name: "Top RSSI t"
+  entity_id: sensor.top_rssi
+  filters:
+    - filter: throttle
+      window_size: 6
+- platform: filter
+  name: "Brandon RSSI t"
+  entity_id: sensor.brandon_rssi
+  filters:
+    - filter: throttle
+      window_size: 6
+# 6 means display only the 1st sample out of every 6 samples... 
+# at teleperiod 300, this means history page will give me 
+# 12/hr x 24hr / window_size 6 = 48 samples per 24 hr # period... 
+# which fits and displays nicely on the default period = 1-day bar graph
+
+
 #
 #
 # Uptime Monitoring Sensor for Sonoffs

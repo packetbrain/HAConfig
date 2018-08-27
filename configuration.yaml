@@ -18,6 +18,10 @@ homeassistant:
       icon: mdi:power-socket-eu
 # while "assumed_state" did turn the remote controls into toggles... 
 #doesnt help the use case
+    "sensor.*_rssi":
+      unit_of_measurement: "RSSI"
+    "sensor.*_rssi_t":
+      unit_of_measurement: ""
 #
 #
 # The next line caused logic problems with HAASKA
@@ -127,15 +131,32 @@ recorder:
      - sensor.speedtest_download
      - sensor.speedtest_upload
      - sensor.speedtest_ping
-     - sensor.garage
-     - sensor.foyer
-     - sensor.fireplace
-     - sensor.table
-     - sensor.tall
-     - sensor.island
-     - sensor.top
-     - sensor.brandon
      - sensor.garage_temp
+     - sensor.garage_rssi
+     - sensor.foyer_rssi
+     - sensor.fireplace_rssi
+     - sensor.table_rssi
+     - sensor.tall_rssi
+     - sensor.island_rssi
+     - sensor.top_rssi
+     - sensor.brandon_rssi
+     - sensor.garage_rssi_smoothed
+     - sensor.foyer_rssi_smoothed
+     - sensor.fireplace_rssi_smoothed
+     - sensor.table_rssi_smoothed
+     - sensor.tall_rssi_smoothed
+     - sensor.island_rssi_smoothed
+     - sensor.top_rssi_smoothed
+     - sensor.brandon_rssi_smoothed
+     - sensor.garage_rssi_t
+     - sensor.foyer_rssi_t
+     - sensor.fireplace_rssi_t
+     - sensor.table_rssi_t
+     - sensor.tall_rssi_t
+     - sensor.island_rssi_t
+     - sensor.top_rssi_t
+     - sensor.brandon_rssi_t
+
 
 # This should keep db size down a bit... 
 # used different domain/entity list for history and recorder components
@@ -152,26 +173,34 @@ history:
 #      - cover
     entities:
      - cover.garage
+     - light.Foyer
+     - light.Fireplace
      - light.Table
+     - light.Tall
      - light.Island
      - light.Top
-     - light.Fireplace
-     - light.Foyer
-     - light.Tall
      - light.Brandon
      - sun.sun
      - sensor.speedtest_download
      - sensor.speedtest_upload
      - sensor.speedtest_ping
-     - sensor.garage
-     - sensor.foyer
-     - sensor.fireplace
-     - sensor.table
-     - sensor.tall
-     - sensor.island
-     - sensor.top
-     - sensor.brandon
      - sensor.garage_temp
+     - sensor.garage_rssi
+     - sensor.foyer_rssi
+     - sensor.fireplace_rssi
+     - sensor.table_rssi
+     - sensor.tall_rssi
+     - sensor.island_rssi
+     - sensor.top_rssi
+     - sensor.brandon_rssi
+     - sensor.garage_rssi_t
+     - sensor.foyer_rssi_t
+     - sensor.fireplace_rssi_t
+     - sensor.table_rssi_t
+     - sensor.tall_rssi_t
+     - sensor.island_rssi_t
+     - sensor.top_rssi_t
+     - sensor.brandon_rssi_t
 
 
 # Note entities configured here are shown *before* a) their specific domains b) all domains
@@ -180,46 +209,71 @@ history:
 
 history_graph:
   rssi_garage:
+    name: "Garage"
     entities:
-      - sensor.garage
+      - sensor.garage_rssi_smoothed
+    hours_to_show: 240
+    refresh: 60
+  rssi_familyroom:
+    name: "Family Room"
+    entities:
+      - sensor.foyer_rssi_smoothed
+      - sensor.fireplace_rssi_smoothed
+      - sensor.tall_rssi_smoothed
     hours_to_show: 240
     refresh: 60
   rssi_foyer:
+    name: "Foyer"
     entities:
-      - sensor.foyer
+      - sensor.foyer_rssi_smoothed
     hours_to_show: 240
     refresh: 60
   rssi_fireplace:
+    name: "Fireplace"
     entities:
-      - sensor.fireplace
-    hours_to_show: 240
-    refresh: 60
-  rssi_table:
-    entities:
-      - sensor.table
+      - sensor.fireplace_rssi_smoothed
     hours_to_show: 240
     refresh: 60
   rssi_tall:
+    name: "Tall"
     entities:
-      - sensor.tall
+      - sensor.tall_rssi_smoothed
+    hours_to_show: 240
+    refresh: 60
+  rssi_kitchen:
+    name: "Kitchen"
+    entities:
+      - sensor.table_rssi_smoothed
+      - sensor.island_rssi_smoothed
+      - sensor.top_rssi_smoothed
+    hours_to_show: 240
+    refresh: 60
+  rssi_table:
+    name: "Table"
+    entities:
+      - sensor.table_rssi_smoothed
     hours_to_show: 240
     refresh: 60
   rssi_island:
+    name: "Island"
     entities:
-      - sensor.island
+      - sensor.island_rssi_smoothed
     hours_to_show: 240
     refresh: 60
   rssi_top:
+    name: "Top"
     entities:
-      - sensor.top
+      - sensor.top_rssi_smoothed
     hours_to_show: 240
     refresh: 60
   rssi_brandon:
+    name: "Brandon"
     entities:
-      - sensor.brandon
+      - sensor.brandon_rssi_smoothed
     hours_to_show: 240
     refresh: 60
   temp_garage:
+    name: "Garage Temperature"
     entities:
       - sensor.garage_temp
     hours_to_show: 240
