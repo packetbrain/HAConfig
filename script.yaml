@@ -27,6 +27,110 @@ test_pushbullet:
         data:
           file_url: https://i.pinimg.com/originals/c1/55/a1/c155a1b393899ffd7c36ff01090ce8f5.jpg
 
+
+#
+# Script to ring doorbell buzzer chime in a sequence of on/off frequencies
+#
+doorchime:
+  alias: 'Door Chime'
+  sequence:
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwmfrequency"
+        payload: 1200
+    - delay:
+        milliseconds: 500
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 500
+    - delay:
+        milliseconds: 150
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 0
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 500
+    - delay:
+        milliseconds: 150
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 0
+
+
+    - delay:
+        milliseconds: 3000
+
+
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 500
+    - delay:
+        milliseconds: 150
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 0
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 500
+    - delay:
+        milliseconds: 150
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 0
+
+
+    - delay:
+        milliseconds: 3000
+
+
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 500
+    - delay:
+        milliseconds: 150
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 0
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 500
+    - delay:
+        milliseconds: 150
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 0
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 500
+    - delay:
+        milliseconds: 150
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 0
+    - service: script.doorchimeloop
+
+doorchimeloop:
+  sequence:
+    - delay:
+        milliseconds: 3000
+    - service: script.doorchime
+
+
 #
 #
 # Xbox uses RC6 IR protocol - two codes sent for ON/OFF 

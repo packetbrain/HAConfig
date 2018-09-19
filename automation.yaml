@@ -41,6 +41,42 @@
         topic: "cmnd/sonoffs/status"
         payload: "11"
         retain: false
+# 
+#
+# Controlling PWM for buzzer when laundry door is opened
+#
+#
+- alias: laundrybuzzer
+  trigger:
+    platform: state
+    entity_id: sensor.laundryreed
+    to: 'ON'
+
+  action:
+    - service: script.doorchime
+
+
+
+- alias: laundrybuzzeroff
+  trigger:
+    - platform: state
+      entity_id: sensor.laundryreed
+      to: 'OFF'
+    - platform: state
+      entity_id: sensor.laundry_touch_switch
+      to: 'ON'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: script.doorchime
+    - service: homeassistant.turn_off
+      entity_id: script.doorchimeloop
+    - service: mqtt.publish
+      data_template:
+        topic: "cmnd/laundrydoor/Pwm3"
+        payload: 0
+
+
+
 #
 #
 # Automation to detect 5 garage door states

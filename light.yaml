@@ -10,6 +10,14 @@
 #
 #
 
+# Laundry Door Open Buzzer
+#- platform: mqtt
+#  name: "Laundry"
+#  state_topic: "stat/laundry/RESULT"
+#  command_topic: "cmnd/laundry/PWM3"
+
+
+
 #
 # Family Room Lights
 #
@@ -79,6 +87,19 @@
   name: "Brandon"
   state_topic: "stat/brandon/POWER"
   command_topic: "cmnd/brandon/power"
+  qos: 0
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: false
+
+#
+# Dad's Office Lights
+#
+
+- platform: mqtt
+  name: "Office"
+  state_topic: "stat/office/POWER"
+  command_topic: "cmnd/office/power"
   qos: 0
   payload_on: "ON"
   payload_off: "OFF"

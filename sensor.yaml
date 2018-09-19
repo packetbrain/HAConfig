@@ -116,11 +116,60 @@
 #
 - platform: history_stats
   name: Garage Today
-  entity_id: cover.garage
-  state: 'open'
+  entity_id: sensor.reed_switch_open
+  state: 'ON'
+# old way below double counts
+#  entity_id: cover.garage
+#  state: 'open'
   type: count
   start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
   end: '{{ now() }}'
+#
+#
+# Laundry Door Sensor - NodeMcu tasmota
+#
+#
+- platform: mqtt
+  name: "LaundryReed"
+  state_topic: "stat/laundrydoor/POWER1"
+
+
+- platform: template
+  sensors:
+    laundry_door:
+      friendly_name: "Laundry Door"
+      value_template: >-
+        {% if states.sensor.laundryreed.state == 'ON' %}
+          Open
+        {% elif states.sensor.laundryreed.state == 'OFF' %}
+          Closed
+        {% else %}
+          Error
+        {% endif %}
+
+
+- platform: mqtt
+  name: "LaundryPlunger"
+  state_topic: "stat/laundrydoor/POWER2"
+
+- platform: template
+  sensors:
+    laundry_deadbolt:
+      friendly_name: "Laundry Deadbolt"
+      value_template: >-
+        {% if states.sensor.laundryplunger.state == 'ON' %}
+          Locked
+        {% elif states.sensor.laundryplunger.state == 'OFF' %}
+          Unlocked
+        {% else %}
+          Error
+        {% endif %}
+
+
+- platform: mqtt
+  name: "Laundry Touch Switch"
+  state_topic: "stat/laundrydoor/POWER3"
+
 #
 #
 # RSSI Monitoring Sensor for Sonoffs
@@ -425,4 +474,15 @@
 - platform: filesize
   file_paths:
     - /config/home-assistant_v2.db
+#
+#
+# Tracks number of lines of YAML code you have
+#
+#
+- platform: command_line
+  name: "YAML Config"
+  command: "wc -l `find /config -name '*.yaml' -print` | tail -1 | awk ' { print $1 }'"
+  unit_of_measurement: "Lines"
+  scan_interval: 10800
+
 

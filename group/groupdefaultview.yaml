@@ -18,6 +18,7 @@
       - sensor.speedtest_upload
       - sensor.speedtest_ping
       - sensor.homeassistant_v2db
+      - sensor.yaml_config
 #      - counter.mycounter
 
   Family_Room:
@@ -39,7 +40,11 @@
     name: Upstairs
     entities:
       - light.Brandon
-
+      - light.Office
+      - sensor.laundry_door
+#      - sensor.laundryreed
+      - sensor.laundry_deadbolt
+#      - sensor.laundryplunger
 
 
   Garage:
