@@ -487,7 +487,30 @@ input_boolean:
     initial: OFF
 
 
-#binary_sensor:
+binary_sensor:
+  - platform: mqtt
+    name: "Wemos Sw 2"
+    state_topic: "tele/wemos1/SENSOR"
+    value_template: '{{ value_json["Switch2"] }}'
+
+#    state_topic: "stat/custom1/POWER2"
+#    state_topic: "cmnd/custom1/POWER"
+#    payload_on: "1"
+#    payload_off: "0"
+
+  - platform: mqtt
+    name: "Wemos Sw 3"
+#    state_topic: "stat/custom1/POWER3"
+    state_topic: "tele/wemos1/SENSOR"
+    value_template: '{{ value_json["Switch3"] }}'
+
+  - platform: mqtt
+    name: "Wemos Sw 1"
+    state_topic: "stat/wemos1/POWER"
+
+
+
+
 #  - platform: template
 #    sensors:
 #      garage_opening:

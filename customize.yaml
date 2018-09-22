@@ -54,6 +54,13 @@
     friendly_name: Garage
 #
 #
+# Use door device class so that icons in front end change
+#
+#
+  sensor.laundry_door:
+    device_class: door
+#
+#
 # Badge Sensors - changing label below the badge
 #
 #

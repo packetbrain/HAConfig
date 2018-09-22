@@ -44,8 +44,14 @@
       - sensor.laundry_door
 #      - sensor.laundryreed
       - sensor.laundry_deadbolt
-#      - sensor.laundryplunger
-
+      - sensor.laundryplunger
+      - sensor.laundryplungertele
+      - sensor.wemos_sw_1
+      - sensor.wemos_sw_2
+      - binary_sensor.wemos_sw_1
+      - binary_sensor.wemos_sw_2
+      - binary_sensor.wemos_sw_3
+      - sensor.wemos_sw_3
 
   Garage:
     name: Garage

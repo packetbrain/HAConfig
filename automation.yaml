@@ -51,7 +51,6 @@
     platform: state
     entity_id: sensor.laundryreed
     to: 'ON'
-
   action:
     - service: script.doorchime
 

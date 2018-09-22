@@ -131,7 +131,12 @@
 #
 - platform: mqtt
   name: "LaundryReed"
-  state_topic: "stat/laundrydoor/POWER1"
+  state_topic: "cmnd/laundrydoor/POWER1"
+
+- platform: mqtt
+  name: "LaundryReedTele"
+  state_topic: "tele/laundrydoor/SENSOR"
+  value_template: '{{ value_json["Switch1"] }}'
 
 
 - platform: template
@@ -139,9 +144,9 @@
     laundry_door:
       friendly_name: "Laundry Door"
       value_template: >-
-        {% if states.sensor.laundryreed.state == 'ON' %}
+        {% if states.sensor.laundryreed.state == 'ON' or states.sensor.laundryreedtele.state == 'ON' %}
           Open
-        {% elif states.sensor.laundryreed.state == 'OFF' %}
+        {% elif states.sensor.laundryreed.state == 'OFF' or states.sensor.laundryreedtele.state == 'OFF' %}
           Closed
         {% else %}
           Error
@@ -150,16 +155,21 @@
 
 - platform: mqtt
   name: "LaundryPlunger"
-  state_topic: "stat/laundrydoor/POWER2"
+  state_topic: "cmnd/laundrydoor/POWER2"
+
+- platform: mqtt
+  name: "LaundryPlungerTele"
+  state_topic: "tele/laundrydoor/SENSOR"
+  value_template: '{{ value_json["Switch2"] }}'
 
 - platform: template
   sensors:
     laundry_deadbolt:
       friendly_name: "Laundry Deadbolt"
       value_template: >-
-        {% if states.sensor.laundryplunger.state == 'ON' %}
+        {% if states.sensor.laundryplunger.state == 'ON' or states.sensor.laundryplungertele.state == 'ON' %}
           Locked
-        {% elif states.sensor.laundryplunger.state == 'OFF' %}
+        {% elif states.sensor.laundryplunger.state == 'OFF' or states.sensor.laundryplungertele.state == 'OFF' %}
           Unlocked
         {% else %}
           Error
@@ -168,7 +178,35 @@
 
 - platform: mqtt
   name: "Laundry Touch Switch"
-  state_topic: "stat/laundrydoor/POWER3"
+  state_topic: "cmnd/laundrydoor/POWER3"
+
+
+#
+# Switchtopic - Tasmota experiment
+#
+
+#- platform: mqtt
+#  name: "Wemos Sw 1"
+#  state_topic: "stat/wemos1/POWER"
+
+#- platform: mqtt
+#  name: "Wemos Sw 2"
+#  state_topic: "tele/wemos1/SENSOR"
+#  state_topic: "cmnd/custom1/POWER"
+#  state_on: "ON"
+#  state_off: "OFF"
+#  value_template: '{{ value_json["Switch2"] }}'
+
+
+#- platform: mqtt
+#  name: "Wemos Sw 3"
+#  state_topic: "cmnd/wemosbutton/POWER3"
+
+
+
+
+
+
 
 #
 #
